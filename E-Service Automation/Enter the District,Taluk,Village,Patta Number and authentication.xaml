@@ -1,0 +1,1193 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Enter_the_District_Taluk_Village_Patta_Number_and_authentication" this:Enter_the_District_Taluk_Village_Patta_Number_and_authentication.in_enterDataUrl="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" this:Enter_the_District_Taluk_Village_Patta_Number_and_authentication.in_districtName="Tirunelveli" this:Enter_the_District_Taluk_Village_Patta_Number_and_authentication.in_talukName="Naguneri" this:Enter_the_District_Taluk_Village_Patta_Number_and_authentication.in_villageName="KALAKAD PART 1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_enterDataUrl" Type="InArgument(x:String)" />
+    <x:Property Name="in_districtName" Type="InArgument(x:String)" />
+    <x:Property Name="in_talukName" Type="InArgument(x:String)" />
+    <x:Property Name="in_villageName" Type="InArgument(x:String)" />
+    <x:Property Name="in_pattaNumber" Type="InArgument(x:String)" />
+    <x:Property Name="in_authenticalValue" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1474,6051</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Enter_the_District_Taluk_Village_Patta_Number_and_authentication_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.Vision.Core.OCR</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="861,5986" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="819,5894" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:String" Name="str_getAuthenticalValue" />
+        <Variable x:TypeArguments="x:Boolean" Name="bool_submitClick" />
+        <Variable x:TypeArguments="x:Boolean" Name="bool_authenticalValue" />
+        <Variable x:TypeArguments="x:Boolean" Name="bool_pattaNumber" />
+        <Variable x:TypeArguments="x:Boolean" Name="bool_villageName" />
+        <Variable x:TypeArguments="x:Boolean" Name="bool_taluk" />
+        <Variable x:TypeArguments="x:Boolean" Name="bool_district" />
+        <Variable x:TypeArguments="x:String" Default="Enter the Correct Authentical Value" Name="str_catchvalue" />
+        <Variable x:TypeArguments="x:String" Default="GGRFFZ" Name="textauthentical" />
+      </TryCatch.Variables>
+      <TryCatch.Try>
+        <Sequence DisplayName="Enter_the_District_Taluk_Village_Patta_Number_and_authentication" sap:VirtualizedContainerService.HintSize="781,5667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="739,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started the Enter_the_District_Taluk_Village_Patta_Number_and_authentication&quot;]" />
+          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: View Patta / Chitta | eServices - Taluk Offices" sap:VirtualizedContainerService.HintSize="739,5313" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="WindowMessages" ScopeGuid="293cd92b-170a-4720-a6be-65ef1f98d9dd" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="705,5097" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[bool_district]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4a84ece8-4dfc-4f39-bc71-119d63f6ef1a" InformativeScreenshot="4b542fd493449dd8a20b38d529c43979" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='View Patta / Chitta | eServices - Taluk Offices - Profile 1 - Mi*' /&gt;&lt;ctrl name='eservices.tn.gov.in says' role='dialog' /&gt;&lt;ctrl idx='7' role='pane' /&gt;" TimeoutMS="3000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[in_districtName]" />
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <If Condition="[bool_district]" DisplayName="If the district value Enter or Not Enter. what can Do." sap:VirtualizedContainerService.HintSize="663,500" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence sap2010:Annotation.AnnotationText="The District name not Enter to Throw the Exception.The Exception type and Exception Message Should Be Throw." DisplayName="True-Sequence" sap:VirtualizedContainerService.HintSize="242,173" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw Exception="[New BusinessRuleException(&quot;Enter the District Name&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:Annotation.AnnotationText="The District name  Enter " sap:VirtualizedContainerService.HintSize="376,341" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="2000" DisplayName="Type Into 'District'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Text="[in_districtName + &quot;[k(tab)]&quot;]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="357, 381, 419, 23" FriendlyName="'Please Select'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' name='districtCode' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' aaname='' parentid='auto_off' class='col-lg-4' tag='DIV' check:innerText='Please Select ...&amp;#xD;&amp;#xA;Ariyalur&amp;#xD;&amp;#xA;Chengalpattu&amp;#xD;&amp;#xA;Chennai&amp;#xD;&amp;#xA;Coimbatore&amp;#xD;&amp;#xA;Cuddalore&amp;#xD;&amp;#xA;Dharmapuri&amp;#xD;&amp;#xA;Dindigul&amp;#xD;&amp;#xA;Erode' /&gt;" Guid="d0c7a0cd-95a2-4179-b264-95c75edc3347" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAacAAAAbCAYAAADYkEAiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS5SURBVHhe7ZlBUuM8EIV9QApOMsMsqFwl7IGE2YdzUKwHZg1rsveoJbUjtVqyjDMgk/eq3t9ptWPklKq/af/dzZ/3/uY5MHLkyJEjR/7FeXdr/nP7vDdGRERERERsI3ZEKPowN65WKxhuzrXnFxERsa1oJidDqRci1ccjNQEIalF0NmvPMSIiYjvRv9abZ8AJalUWTsqZhWG4bVs43XlSuejyO5GX6oAT1KrobI6dX9RRR729uoOT8ZwIOEGtysJJnFdERMT2Y2cpNdNz4fS0Pu/PVg/9q89PWm8P/dXFeb9+9Dk0Szw5wTC8LHdEqbnOwel1t+rPTKOVlo138XDyQBl7zir9Nzg99Wtz36vdaf0TgCcnGIaX5Why2mTiWL0Mp1W/e/MLpMdr27jDJrloOCnPQ2IwT4YM4HRUhZNT7vyijjrq7dXd5PTiaUWLH8gnwcnIwuji2rTLIF8knFzDP1vzkwgZ0OwAp6Ppbrvp9/u9zw6itc1267NYDk7l84scOfL28o4oNddT4STXdTj5xj9Y3ue1363CurPWfHmKKV2XXJMDTqQROGlKXgEeIG2VgVPV/pJ783Xyt3ReEqgITLTnn78uI0DRZ1qjGl0jRWdTO7MwDLdtOzltiFTGNka5I9lY/ehw8k02bJ7pvQhOemMvf8+Irguau5zk6qHDgEyfUZV/BRiCJ/nbCpyq9qe+XjTXDb+r+86SgBSKIPTj0kGIARWCiWohtFgOTuXzizrqqLdX/5LJScIozn3DT8Dg1svNVX43d69AtqkrcLHrAn6atGlFhVUODm59gJGEU9X+Kp5z4XAiSUCNgYmEyQmGl2kDJ0ewOXEKnNyaMhkwnJTJgWWvEw3YTRXCEnxmLdeUYzAGsvvQIJOTa/7xXoLv5yDjwTLsTzx/1f4Kv9lBy4cTKQQUuQQm0gFO9ecZERHx62O3NR+2f41nxDKcwmZNTht01IB9o02/551cF043foKImrlfi+5z+I4Kt8Dlhl8Q749hauGU3n8wXydAU7W/E4ITiQE1BiYSnc3ac4yIiNhOjCYnWtDiWH3K5KRJg9MYFFzTlq/dNDgJMTT8NdHfPqrEXrKTk5AGp7H9nRicSASlMTCRwskpd35RRx319uqfMDlNhBM39eL/P8k17Qo4Gbl9ebDVQkOTgcI62+z9a77hOSrhIEFTtb+a3+x7walWmJwQEZcZDZwcqdLIHq8fF05G/hVY0kjN+rCmNG17HwJCBDr592Uj97k6hck1IZ7Ckmfke8br/JpTTji0PqwlU1Dl/tTfzABJQn8E3KFy+3W/s3xmD+MJ9/8MWTiNnF/UUUe9vXpHlLovuKZ+dDhZ+WYXWW/27PVj2oDlNdbKhFF7XSptn4XvDkALHUAmgZNT1f6UeyewytZS8d9cOpy0c8s+xvnX1tmo6+ts1PV19inXC5NTfczBCYK+WvnJCRERseXYacSaasAJalVjkxMMw226uzeUssmMCDhBrWqAU8U5RkREbCfayek3JTMi4AS1KjqbtecYERGxnWgmp3f74UCsj+XUBGC4NR/rfCNHjvxz844oBcMwDMMteXitlzPq+jobdX2djbq+zkZdX2ejrq+zv2993/8D+f3yh5NdZzsAAAAASUVORK5CYII=" InformativeScreenshot="0adf3935900697de51aa4fdb0898b0a2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="183, 383, 66, 19" FriendlyName="'District'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='FONT' class='bold_text_black' aaname='District' check:innerText='District' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAXCAYAAAC2/DnWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALnSURBVFhH7VWxchpBDL2/yiekSRxXrskPeAZwnbG7OIXxDDQ2LvAEDGncxTRxmRljU6aEo0nh/twr2pX2Vtpdww0JVa54iJW00u7Tu7vs66KAIaK22mbDxQsMl4jaKovEEEM1NKxiRpapwtpRsP5f41YxI0Rttc0sS1tjBceHe/Dug0Ebjp9SObvArvsukRhmaLR4gKZtlEZjkHOeRK4P+BjGd4Vd9f0Fz/tvofh8T4q5sSzNoFUS0YOzkr14OpTv4dah3RQ/O03Xrbp/2/jloM1996A51fEfP+/h+eiAFWMCSjFIjPUzk0iaj3WJNBXfbq2IMVP/y3pV1xeSmLsw/htWzTeQGZYIWjGd0k+QLDcGq9LfSUzd4ukWGmU9gcNbuFQqDGDjuH/aK32mn+9PZ3u1b7BXwtTx+0LwneffoXj/yTxKBRYzTD3oRwkZtH4XfxQXxcNfcFw/DpwvDtacuvpoDVl8cbNWl0PF+H4Yv+uWNTS69gJR33XnYb99T+J//ShxX3Vf/Fx7ptcrRivAx+PJSTUk6ghUnbpUqENy74Y9DpKYFr9jQiAxxNDNUiumU/rZRsSQPz6g/GJ4tOxkRD20em8Qn3rF0CV1PO67oZ6wmph0XjbGn3GOSCiG/GwlMfg49NkvD3My5/y5JDHA6ays2/ni/LgXL6f6yelfr7z/1b4rOBFfz6iesP1rrZhUnlWMWaxTjInHL1+KqwPy5KgexpMvYJ8XTtjtszahGBlP9Q3ryfNL2w8UE8aNragYOQ2MCWbjyZE/tKm8f6sYrQRDpqonbCXFjJmhcUIx5M9jiVo/xcPJOYLdJChPEOseQ+MXl/f5jEAx/pyEuG/QR/kpn+qgTyjZfKmopq6fTZAdwgzanJzCR5yaz8XNbM/l1HFy6+rIGm7/lZieBRJ3ZeKCtLC3gVKb7Ssg9kqo/lFOD85FDaGY2korFFNDIpsgO3ZRW2WtYr4ZR22VFYop2NbrSf4CfwCQO91m6N/TyAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,238" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Delay DisplayName=" Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                        </Sequence>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[bool_taluk]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="139168f8-7cd6-4a6e-8f4f-f4d096c75296" InformativeScreenshot="b487af5c09fa8cd7ed811619837f539d" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='View Patta / Chitta | eServices - Taluk Offices - Profile 1 - Mi*' /&gt;&lt;ctrl name='eservices.tn.gov.in says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" TimeoutMS="3000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[in_talukName]" />
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <If Condition="[bool_taluk]" sap:VirtualizedContainerService.HintSize="663,469" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw Exception="[New BusinessRuleException(&quot;Enter the Taluk Name&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,310" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="2000" DisplayName="Type Into 'Taluk'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Text="[in_talukName + &quot;[k(tab)]&quot;]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 407, 153, 23" ElementType="DropDown" FriendlyName="'Please Select ...'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl name='talukCode' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='talukCode' type='' tag='SELECT' class='combo_box' aaname='' /&gt;" Guid="02600e02-ccfd-4864-bda1-677c5b96ba47" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAbCAYAAABmz40TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPASURBVHhe7ZZNbtswEIV9wCA5SZsuAl3FuUCTND/NxjlHkAs07S7ZO2uVj5yhyOFQogszsNF5wEAiRdHkzKdHr3782o43LnCthT3X+znsud7PIZ+vbl8/QuM1dNzSdWrbc3u+3+fe6TiGYbCw6BIpZ87pHH0EnMnUS+ALnHmnww27nMnUS+x24M3/pwN9Bp2pp7zT4VR1vHmns+PV1FseOna6uz053cv6dDwZnsY3av/Xen8aL85Ox/UztU3R6cCbg27e6d42w3jiEihDJvTooSNQlvbZpG7QvYxrN+/F5viyzE4H3rzT4WYeumHcvFMH9HzpC5Ju/qihU/YD8Qe3MzwGXSHwBc6i090tOp2AzslDdnbp0pC0jxK6UMiTNe9EyAG0Megyfb++GrfbLbUmoe/q+ppauTx07HT3/+J0TrJfh44KGkPO8zZuhvR5CC2p7Dpz44oxNZAyLUCnqTiKp4/PqwJd0/qKuXmczGWIzwYQwOF3v347z8DDPfrwDGOk2OnAW3C6HtBR8tKklHMBOr1g8+85YVxSNOm87TAx+OUeVdFRnAJV/LYCXdP61GPejYt5De98NmipANeX8wAXg5cCh2cpjCyGDrG6//3h6dsVOglZ3qZCFgUP/fNJk+/W5krki6VA4/sF1Jo0d1EhrBU99EfIJHRN62vY5wFAB0nwloCDwBc4A2/ueN3d6UKf8iUzdMqXzvLjRGKDC4iQQLu+WrJz4BP5dWjw1BSKmq8leb8GDwET1yf237S+mZxNOgzooBQ8xBxwEDsdeCOnW4IuLQKiTHyWWEpg+R5FMS51I/risyJRXzbP9I4KbRLzhZwRr48/Eg9dOX8MHicAalrfkUEHMXhLwEHB6Rx07HTL0C27hQbdUrFDMeTxp0EnxDDQmOy39yqxlqrTCWnQLa3vCKGDANsScFCEzsXqwZGH2Ct0XKzZ/ye1YjRA5xTWRcC2wqDJFXtdLSIdt3EfjUWXADWtryVnhwddq8AXs7Z66OF0EB1FRYJcf+xTiuHnQaEzgOXvywJRW3VN2SfErlnskefM+/nvhnQk9Me+wrUa16fmzIEmP+aFDzJVbb0hz3LP9JHtMH+r2OnAWyenY9EmstCLyLF+LhMrx/hQHKF1XCltnTPvRlDTSOApoAtqWp8ydwFh9Vkp/s1DgG5yOtzMOJ3JtA956OB0gO4n0WfQmXoKfIE1hHO6cM4adKaempzO/adj+gw6U09lThduthE8C4sekXK2evwT6Hv0ne5qbWt3bmdOZ1e79r9+jH8B0LxwP4hYVpkAAAAASUVORK5CYII=" InformativeScreenshot="e7ecd9087e51c5d7d8195f66d8552de9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="183, 409, 49, 19" FriendlyName="'Taluk'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='3' tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='bold_text_black' type='' tag='FONT' aaname='Taluk' check:innerText='Taluk' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADUAAAAXCAYAAACrggdNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJPSURBVFhH3VSxThtBEL0PtEKTHuEfoLDTpsGisCUKfGmxoYgUfLbLGNFE6UAxpauIo0qXznRIm53ZGd/seO58jijgisdjZ2dm9+2bc/Ltce2ahuTa/7nOPRrE6BT80yROUF3+HFQ2hMP4NQzo1IQUTlDtK68XqWsdfEAcXea78431eT/Utw467mS5Ox+dmixn7ogOroZv+ouK4VWIK9fflahd+cY6ElVx/o+vn93Lx1OXQACUSh5ddqKL6P29WDlVu06w5ZSZ//uPW42+eFGkVPK2qHh/L1ZO1a4TbDlVln/78yI4lZFS5rESpfez/N51aV9D5uMLGk5lee5OjrkmdcNN3zh+TvGhcgr7q0+mu4D4X7c6O+Txi2E6FeHOi+JRIJhjVhbXl6fckvj2+MH5OlYgAdXZk4fg8ZVySu3bnLseX+h47sYcl6KugovZk8gFpzZ97PhwwLGO6y3lGhyCOq4PTOMXFDJvj1+8z1yMhUZ4ZcyrNX7c147L8ev2t6dI38s75ReokLnMqWI/uykuWryoemXOr+0U5Ntx6UyEwT3VcT2wdwoXCpZTEvLlevjhAgxRAOVUZW5JPJqI/kzk8A9EjGTq1WlIp9r+deP9+OB0V1y4WvTar0cqv6kHH3uYuzb1jOsD0KkpKWTWTlXtw0thXDgCB1lOtckpyJc9PtFrT6NftaJHqiZD17f6d5u+wP/hVEDxeoTBfA+nSnr4S7frOIVx6WrcOwF1uEAOat/7Opn5gAVItOKMt7xPTrHiZnCpU+8ZXtSaFk3htfsHpwgfYnmllaQAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_17">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,238" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Delay DisplayName=" Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                        </Sequence>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[bool_villageName]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de2dc0f0-21a4-4835-a613-d0c50dcced94" InformativeScreenshot="8ffc9761120cdf66a22472e544551856" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='View Patta / Chitta | eServices - Taluk Offices - Profile 1 - Mi*' /&gt;&lt;ctrl name='eservices.tn.gov.in says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" TimeoutMS="3000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_18">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[in_villageName]" />
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <If Condition="[bool_villageName]" sap:VirtualizedContainerService.HintSize="663,469" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw Exception="[new BusinessRuleException(&quot;Enter the Village Coloum&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,310" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DelayBetweenKeys="2000" DisplayName="Type Into 'Village'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Text="[in_villageName + &quot;[k(tab)]&quot;]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 433, 209, 23" ElementType="DropDown" FriendlyName="'Please Select ...'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl name='villageCode' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='villageCode' type='' tag='SELECT' class='combo_box' aaname='' /&gt;" Guid="42a696c7-3c1a-46c5-8063-d0114e7e2a5c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANUAAAAbCAYAAADrospHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO9SURBVHhe7ZdNUuMwEEZ9QApOMsMsKF8lXGBgx685B8UNGGYD+4StpltSO1KrbcuJocLwvaouW4qsyE4/tdNcPW/c1fOaAkcccVzi2Fz/2bhrOsERRxyXOTZ8wobxsW1bBAKxQ3ihYjQ3bBgFfwAA2A0vFnnEPvlKdU2VClIBsDuhWoU3PlQqABaA/WGXfKXyUpFdkAqA3QmVKpGKY1+pnlbH7qh9cK+x/a15e3BnJ8du9Rjb4L+nqFQ3I/+pXrvWHVGC6NAJ8+WliiJM3WcVHybVk1vRvGcdtq5Dw0slleo22jUuVeu6t9jBPJ77hEt/3C8tlXE/jGwos+WAVN8OqVTs025SEV6ik3P6mZP2l5QqJOrRSu5EQYJ0kOpb8fvywq3X69jawn0Xl5exlZNL9fLuT+ZKpfttqWLC9qHneXVdm34ewkoaqRpj44oxQ6JkTEhlUbwqbjcXz4BUVesr5pZx+lmGgGDLwkLxc/356zQTi8+5jz/jMRr2hz26fdmjUk1KFZMj/dHLuVgqOyHHryN4XJKUunLWyyJil/doEl8VU2GK7zakqlqf+RpK4/rnGq6BSB8Hy/PjNMgjYqVC8WepbEIvFQVVqnAyVyotUd6OiVokdOgfTwp97dBcCT4ZDSl8v5LWwqoOpmRDSR36e4m0VFXrq7hPSPUpaLGmhGKKSjVXqtBn7MQilbFTC36cSpywi6vQwlLfUDLlQif4dVhyDBGSNl9Lcv2QHFGIfn3q/qvWN/LMtkCqzyIVi2NMKCarVHf0n+qO7BqXKk0yjjKxssSJCVJeF6MYl1aTuGNnSRj7snm215hSJjGeqCPI+mQT8FKV8/ch45QgVeuDVAeHiDUlFMP+sEfsU3O3Q6WysKSaSuaQbPr1zJJKIckex2TfvShqLYOVSmFJNbU+SHWQsExTQjFSqdinyko1UypJxtH/B0PJViEVEdYVhaxNdgtK5tVgksbXwf4+KpNaC1K1vppnBqkOlbxS8cnSlYqJr0pFAlB/32ckm5+HEzkTVH+/TsDYNque7lNI1SvuUebM++V1WFcU7u/7iqpTuT7zmZFIerOa2HBShtYbnrO+57iJzJgfBLxUXKnIp+aezLpfvFIJ8UfKwk5SidVjmTh6jA9jR68dV2Ktc+TaXsQ0EjkKqQJV6zPmLiQb/KxEvhNSfSzsD3vEPk1WKgDANLMqFQBgmqxShRNIBcA+bKWiStX9RaUCYF+CVO+uSyuViIVAIOZH6pGvVB2dhCMF2mijvVe78R0IBGKh2Lh/NFj23aczhWYAAAAASUVORK5CYII=" InformativeScreenshot="82662dca188dce040b610b1809640c3e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="183, 435, 61, 19" FriendlyName="'Village'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='5' tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='bold_text_black' type='' tag='FONT' aaname='Village' check:innerText='Village' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAXCAYAAABUICKvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMSSURBVFhH5VYxb1NBDH4/sAoTM1L7AzIkSka2plIrsURpNoTSREwkeWVJFxYYSIdm7YASgsTGRrohY9+d7/n8/AIVKjRk+OSe77Ofz/f5mmy82oDH92A93qj1/7yfjT9vYIIgy9i3NSqBO7K/NqOucGf4731buzfBOffYRiXcH3NoPanBgUMXeuyfdYOvBoeDZeAu4bhucB8Jsgl15GYMh/pAOCuOFDrWO+X9GrRm5P+YNoH5ugku3miCyv8v1u9fP4cfTzteCdOkyHBI52eb3vp59BtWNOEoKCHN/4v4v2k/fYXbVz1uwgYGg0Ys/uB07kiMqTgY7XGSuC/XxjhUNYGxNd8Dr999eAkZOaZr2hC3XZ/ARSATLkSDSCXT9R36l9BRB3N5lBJ8fsV18ejHMTwKXA33nfB9Xx/iSlwGod6FVpKX+bq+AkX9xP0Gty+ehSYgqCvnce4bcHwTElqHdfzUT3Pu+FYTKpTgmyDWiFLDg98cs6SJRW3k929cAzrhHPaYegglIESn4wHkh878KHj+nyiB4gXiDZIVigyjN12rNynGW3mFL8Yrf32cKD0qwUOOhCdW3YzZBEKFEkxuaU+Bi5UXwQcrxYa8iTqqkNaQ5dilHGeEbf+MiSilxSrp3lDwcnW7ffYnaloFvsjjuD7PcNCM3CL/HNrRN0Efxsu3ANVY1GvkTbjXgcd82zol5KEjzoqbbM8KZdCtJjzjFnQ8KyFX3P62eFRj0QSvhFzkJCUUdRh5DdWkdZetUgJBFBHRRFXwPvMtJSDUu+L5lhKMG3dIm+D918rH9Vo1yPrZJ89XXmfUDbcQthiJAPpwiVe+BedXSvB8o9jkO/4Vp/ih/L0ivtsXv1jbVz4+X6T/HThvMhLcSJlHnSe7xD8usTOJXUySx4Vmu8xbwok6mPOrN8HzV4rLeaSfY8aJQkbiuyP5hrj9LrQ5Hg82qqwvhT6PqYTdsUL69Fb8dlxqbSU8RksKq1RGE07wzdoav8WGJuwA5JxLuDEw+PcANuEO3oaOkHX4Uqz3YX93lPBg2MBPVFmLAzsptwcAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_19">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,238" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Delay DisplayName=" Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                        </Sequence>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Patta Number'" sap:VirtualizedContainerService.HintSize="663,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 418, 13, 13" ElementType="RadioButton" FriendlyName="'INPUT viewOpt'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='' tag='INPUT' type='radio' aaname='' /&gt;" Guid="0dba3ba4-2993-48fd-90fc-a3634ab1b963" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD8SURBVDhPnVNBDoIwEOyjDWd5AFe9GBMTUZGzIA/QAzfeoD6AA72unYViW2Nsu8nQbDs7zC5FVA9Jl8dAsetpvyBRPSVvzAjMRxFOoKyhDm4drbY7WqYpJUnCK3Lsu3wWqSflmg8lbY4lZVlGbdtS3/eEwIoc+zg3+YXtRAkcSsrznAt/Bc7B03WzE6gW947f5BPggY9adjLaGrhnWPYJ8MCvVd0oAicKGJ6ewb8AD/yPk6kdfIWQAJ/HAJGrEgFinKDurEXQ2zpqJoYIKwZ+HfAtJxq4SF73RPHMOtGohwmfG+vWWE40YNX9dzAz3YIL0bxs1Zj8q51wSHoD6fH5/y64nDUAAAAASUVORK5CYII=" InformativeScreenshot="3e78f149dd9dd5e17a754eea2def6d3a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="385, 412, 125, 19" FriendlyName="'Patta Number'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='9' tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='bold_text_black' type='' tag='FONT' aaname='Patta Number' check:innerText='Patta Number' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAXCAYAAAAsnywOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARpSURBVGhD7VfdSptBEP0eUNqXyAMIiuhdvdV4F3pRQ6EQWn+gSltNi173IlLQJ4jU9gGExtvtzuzfmd3ZRGm1lO8TjpuZ2Z2dnT0zmzTvr3+ZDu1G8+H7zHRoN5qP9t+nm5npxvaOzcnNnenQbjQnlgknlhHd2N6RO8EpoJP/jbzbf2aWnhNWzdZlaX9M2ZJg5oWZ2Rut+kA0rHBwOP+/GC+PTA/P0Z9I+9kg2tbPlPVPNL6KJHj6PDf0IQBJ0Btdm9MfTp9Y6vVhjbcvli/Mul+/tHxs9jJ7rQru73+OfHksSYB7kB1JcO71uP6JZDUHf9H/PNmSgBjhIEkw9ZOtTVTTwOzGNd6+UJ4ACY4sCaRdJiDYkv2P5LwTiBisPesExfonklMOqBOU9seUuROMWbgz+1knGHumjLGSganYIQR8tfP6ohITeqNvZmtZt5GPfbu+/kRZMsb4/KjJuH9/EM9BF852IMGG7wTjm2uIi0gf/GX6sB/4oLxhHnG9yJc/n9sv7wS4j5sb8+nn0yj38ehfiPMLv1fgl+Z5f83w7SF/IEZUO4EgQTiUY291HlfbIn3y43yHTpDse6MVDjjNn2YXJOcXI3YC64f9YRxqJ9BIMEcPPgjuycQ4Hdh/Fk+IUxAk5qGWtxRHyj92WyKN5hfgvxuRv2ZnZ8fsf71iVmidgFg1voJq8gxmW7CDnHwQ84L9wmzMWS9JADZvL+RzqF5f0cKOsugEVCUpFqp8rGKWeX122dGfos/iiXmzEOeiXPB88EG58PGqcy3wTkJ8SeeIWM5NPgq/MJ9h5WYymZiXr99YYZaRYMoTJKPpkmbOkZ3P9qwKEHRBxDRMPDGaDx7W21GSIPNP49wnxcUp5qOsVF48J1UMkiDGW1a881fqeT74wHi0c2mdjPRprvt1EOMXvvUOo2HjTPdb5MeOze3trXmxuZkxSUFewVjdFszSzEfQze0EFgVbow2TDlVWqTwV2MWoE7A++e0ta/Fmlx39VfQP6QQVH9UcFL4x7xibjnpuExpj/9bW1pgVshP4wxBrtDFjaNAXJGC9QgLwJwINzwHZtQskvZZ08CfG4jnweqWDpXiVi5qnr8Sjnyvz4eMpLsvry3zq68P8fKz5xTF2gs9WcZCRgHQ14FwKbr5ekuDAzw0YQqDbNtBoy5K7UK8hI1KyXZvtmEyHFC/aBmaorgF9JR79XLqPWg40fdLJ3Guo5hYA3wlyEkx5Ar0dbnQLopy9tc6uPBF+fmKkO3jya0dIIr1laZ+SPGP7JuLlpTiz+MJYxAl22JeA8e6HXxFRn58PziFIkPKGF0CdwOkxfqpkt1/KzwpfVunXkcvFh3GE+d4/dzjaL/frSBDOhyP/Ojiwvw5I8ZBOwMiSSIfarnQIrfJwD9ybEToGVjLDHmZUJqeKaicgyJjyqsKKc1i13yHC58fqBCXyuAKKnAVAt71XJxi+O1QNHdqD5ov916HdaDRmdGgXZCf4CZ87uTVy9xy0HnfmN2mZcOB+TZ4nAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[bool_pattaNumber]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ed49340c-66fe-4366-ba4e-ddf037afa747" InformativeScreenshot="8fc7170c371b9de025ecca7a12ec2df1" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='View Patta / Chitta | eServices - Taluk Offices - Profile 1 - Mi*' /&gt;&lt;ctrl name='eservices.tn.gov.in says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" TimeoutMS="3000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[bool_pattaNumber]" sap:VirtualizedContainerService.HintSize="663,469" sap2010:WorkflowViewState.IdRef="If_4">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw Exception="[New BusinessRuleException(&quot;Enter the Patta Number&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,310" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Patta Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Text="[in_pattaNumber + &quot;[k(tab)]&quot;]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 443, 227, 28" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='text' name='pattaNo' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='text_box patta' tag='INPUT' type='text' aaname='' /&gt;" Guid="d28318d2-f003-4c36-b5f9-c911fea58101" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOcAAAAgCAYAAADpGW8sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFXSURBVHhe7dZBUsJAEIbRnJr7CSjeRPACsIvdkwwG43568V5VGyLrr36m49d9ftucd+/ea7xPx+tjPl7jn56enqWeEWd8WIs9HA7OuYG37XE6raXmF8BYz0C3yylOGK/FmcsZXbblPFlOKCE7zB6zy4jTckIVfTmzS8sJheyWU5xQw2+csZzn22M+R6XihPGyw+wxu7ScUMg/yylOqGBZzvuynO2DOKGEZ5xx03suZ5w4YbwWZ/SYXVpOKGS3nHnihPGyw97k8rPWckIJfTnfb5YTSvmznFGp5YQSWpx9OT8sJ5TRlzO7XOO0nFDBEud9jfN7qVScMF52mD1ml5YTClniXJfzYjmhjN1yZqnihPF2y5knThgvO+xNThfLCWX05cwuLScU8rqc+SEqFSeM1+KMHlucn/GnX37hnBt32x7X5YzfuO25FOvdu/fx7y/L6Zyrco/5B9HVhpENpOJUAAAAAElFTkSuQmCC" InformativeScreenshot="fa7e8c28a8e67db7537fc21817fea5f0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="183, 445, 131, 19" FriendlyName="'Patta Number'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl parentid='ptNo' tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='ptNo' type='' tag='FONT' class='bold_text_black' aaname='Patta Number:' check:innerText='Patta Number:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAAAXCAYAAAAhgVxJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARSSURBVGhD7VYxT1tBDM4PrOjasVtmpMzQsRMSoEgdO0CYKhEJuiJRQocgdajCnqCqoVM3WKrr+c6+s32+R4qAtuKGT87ZPp/P99kvvdPvN+506QGS0NZt7WUPfnxa3kYFyrZua5CBHAHEmLZua1z3gCURkTFt3da0xs9KZEqQbd3WuPaTAxacOU0+uZyNXf/lmnsB2JqW9r8kkRyAqdugBC2EpMn3/8HeFr/HwG3PuH3uttfRtn7ojti+J8XsUJHD8HlCfP3wxv169db1zjxLzq49lheMHEO3T3rOaq7/A3l0MMD9a27jRNlF11x0xrmP3BfkwDOSfeF2EjnG7qgjzqPKS1WDVfc9lvy2dFejd7XJMXR7jEm8+/oH86RfFZIcyv7IXSMnR0TOoU2OGr5M3/PJIcmx7x2ISfxxE7P5hRTCdMD9Recm+DNOhoY+Ah7w7JpPMwkgaWJ6kDlfvs7nD9zGFt4DpkSw88nhyUH7WV79g0WOJ/R0PosR6iZzTvtVveL98Dw9OVRdeD3z/ay/AQO3MyO79xdxpywu+Kn7g+6S4v90V7uvgRzeKcAgB4KTIxQF9OGydb9w+Tv0AaprhC3khBchnX4g4V+Ck2Nnlu8Y85hLctC+2hmmnsUIwJqoB6b4Mh+MqxsN61CtW4qd62/6VhuYzua5qzp79IBlE2Ca79LNtNkfmvS3bsS6H1hM+lKyrvEdQPpjkbjaZ3xvy7hclv8TuvzFY/jOSEX0e49VrGPaJ0iwyPFMvZoc4Af62r1YjE38/zVRvuk8Xs+UX34nmkrRn70fnVeNS9KYHMx+9+TgHVB0tu4aBtaJ958cEZ2fJsOfo+xUPj0eenKwfGr3smJUa2DE5u9RA91lhdp2oQcsieCTowSwPPvKaUCsFjGSTvrqOBa7E0Qhhm4U9LJTo66OPPViZwR9ijtw/USOnK81Ier6Sj61e1kxqjUoY/NaitwsdNV2BYTJAT+go8RnJegjg6Kdr8uko55NH8/eY/SXnxUVz2A32cXD+q6P55fdVOaX1/KzYuWPYPnKB5zneIW+Ix9xLz/mMR9rcshHnObzrHpa+2v3v5S1terTta5Mjrs60p4QDzs5ahOiprdhTg4AK3LAvzg5LD3XidobqNaWwHNX9fHoTZAxEzU5RkmvJEIWPdrlpyYyPexjDKaOy3Hldz/sQbskFerFoxp5sv0gizyTnXe8Bz/bd2wmeb6HHOl0Dzk5RhRDTcSUnyCHjwF6o8OLuOx+os7JH2y4h86z4hK4f/DR9cHJcR6YUk6OqK/JhdvlxfXoH4zF5PjI/cWjAuIZ0c7PjoAJA/vy4yK2xuzcu/Pk5NjFzkh2npPOl3cdor/OybHAOLwOLB+ja4PemBznxlkJOq8ky5oRaDqLuD4HuR+knBy6Pp4cN7goJTg0+/O19+DH+Y/Iliab5NKTIzJFy8ggQrM/R3uYHJ8VY9q6rUFWJ0eTz13euN/6ZRNYLaJmdQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'IMG  captcha_name'" sap:VirtualizedContainerService.HintSize="663,168" sap2010:WorkflowViewState.IdRef="GetOCRText_4">
+                    <ui:GetOCRText.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                        <ActivityFunc.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                        </ActivityFunc.Argument>
+                        <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_2" Image="[Image]" />
+                      </ActivityFunc>
+                    </ui:GetOCRText.OCREngine>
+                    <ui:GetOCRText.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60edb1fe-3dbf-4e40-98c1-5aa8ad0cc33a" InformativeScreenshot="a36e060077f1490e6f5e671c327870e1" Selector="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IMG' id='captcha_name' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:GetOCRText.Target>
+                    <ui:GetOCRText.Text>
+                      <OutArgument x:TypeArguments="x:String">[str_getAuthenticalValue]</OutArgument>
+                    </ui:GetOCRText.Text>
+                  </ui:GetOCRText>
+                  <Assign sap:VirtualizedContainerService.HintSize="663,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[in_authenticalValue]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[Split(str_getAuthenticalValue,"|")(1).Trim]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[bool_authenticalValue]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ea7e4bc-c8f8-43a3-b899-489d8ad41931" InformativeScreenshot="ac522296033d7a4336e0bbc6f07df82f" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='View Patta / Chitta | eServices - Taluk Offices - Profile 1 - Mi*' /&gt;&lt;ctrl name='eservices.tn.gov.in says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" TimeoutMS="3000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[bool_authenticalValue]" sap:VirtualizedContainerService.HintSize="663,469" sap2010:WorkflowViewState.IdRef="If_5">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw Exception="[New BusinessRuleException(&quot;Enter the Autentical Value&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,310" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Enter authentication'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Text="[in_authenticalValue + &quot;[k(tab)]&quot;]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 469, 159, 53" ElementType="InputBox" FriendlyName="'INPUT captcha'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='captcha' tableRow='1' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='captcha' class='' tag='INPUT' type='text' aaname='' /&gt;" Guid="56bc0f9e-f314-4ba2-b502-c95e4b655f5a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKEAAAA3CAYAAABkbiroAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKMSURBVHhe7d3BTlpBGIbhuQSWXBu3wNUJChWrjWmbtCkJt6BWCvUs5RxIavg73xSSObJqwvln877JxBx0+eRDdDHhfrW1u2Vts2Vj06faruIZP77a6HFjo4eNXcSvFw+vh6888/z/z6P4LE/jeORr+rRJ3u7ikb/w6Vdjs+favqy3tqrf7G1vRJ0lX3Imb3Inf+EmatQLf/Z7WywWNhgMrN/vW6/X43DOeuRKvuRM3uRO/sJ11CiZ+gb4OB5HzuRN7uQvTOJ7tCZSQvUDw+HQqqo6jCfR+ZIr+ZIzeZM7+QtX8ZdEdVxBAFKXyddxDZX8hcv4iUXpGzpEXZdbk78wjnOoQEhe5dbkL+hvNwqE5FULoZbwkiUk53Jr8hcRsoTkWxshS0gFaiNkCalAbYRxCfUPZQVC8iq3Jn8sIbmXW2MJqUi5tbSEx3/bgZC8aiNkCalAbYQsIRWojTAu4eQnS0i+5dbkjyUk93JrLCEVKbeWlnDCEpJzLYRawilLSM7l1uSPJST3cmssIRUpt5aWEITkHQipeCCk4p0g/ABCci63Jn8gJPdASMUDIRXvBOE1CMm53Jr8sYTkXm6NJaQi5dbSEoKQvAMhFQ+EVDwQUvFASMUDIRUPhFS8E4S6VUeBkLzKrckfS0ju5dZYQipSbi0t4YwlJOdaCLWEN89NegAheZVbk7+IkCUk39oI4xLeLv8tIXfbkUfv77aTv3TpNrd8kkdy9f6Wz3Tptq5//91w3zHH78iZvMmd/IWv6639eOHmd073R67kS87kTe7kL3x/2dnndRNf2CWZmkiirpIvOZsf3MlfmFc7+3YQeb9q0nv07bK2j/HokwuHc44jT3IlX3Imb3I3r3b2F/o7SY7t1sjFAAAAAElFTkSuQmCC" InformativeScreenshot="69ed47e5185896c23fda56b630de58a9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="183, 471, 131, 67" FriendlyName="'Enter authentication'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='11' parentid='auto_off' tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='bold_text_black' parentid='auto_off' type='' tag='FONT' aaname='Enter authentication Value:' check:innerText='Enter authentication Value:' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="663,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="362, 717, 66, 26" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='button' tag='INPUT' type='submit' aaname='Submit' check:text='Submit' /&gt;" Guid="0162106b-a5c7-4334-b1f6-37d6f2f5a790" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAeCAYAAACR82geAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIRSURBVGhD7ZZNcoJAEEa5mFu33sG1N3Dj1r0HcOPOI1iWd8gFPELUxFRMZOye325oECmiFe3Fc6AZZpjHB5i9f5+N5eRb3bckMQoj251yayvLMgXYYXLQRzQExfXb10uDDkhiztaSinFiog+7oYmxRDEuMbkmxuPEeB+amARLzB4M7e+SmK0Z98Pbf2JmYp8uofMNzHgl9eFg3+gDf8qPEh20QH9ulmSw5vwXMd6HM5Tbou2wmPjBACYhTTRcpMGac28xVWzMUFwfTQz4QEPpUSInVVkGcc8txvs4hGcKiuvV3PTCSU0unvYfba7Ui2LoTaD9HLNROIY3iJ5L+/IxetNtzRhQY+vj4LnYRh/REBSLEyG16WgtBvHiK8ZIi0KqFubGWE4HsUavtyTG1psm5ic3CBbxIJ2kTCFFrcXwcaQF3LQoMh9NTRsx0ceBJcZ3Kt0ZTrwrHYmR7nhbMXLqbhBTlRgR+qVCwuTPKIYmBsFi6CAifcY7EiMt4JGJsT4+wA6CRTsBXSCFigl9OhEj1x8lJvpgiSET8K8RGazBokSJFX07+aLcJIbW6VrqEgMH675KXFaASvP0B1cSU4RfOPKXYqRrCf9jog+30eAd8wIkMeDjEzYQFePERB9oRxPjcInxPjQxCZYYt6GJQZIYTMyvJiZgxQQfNDEKScwRDB1hR1veZviDllx79u2r7+fmAv5CuLuzVgdtAAAAAElFTkSuQmCC" InformativeScreenshot="ccad68b6fbb9982ea4f40b6061f0b2a7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="372, 613, 171, 44" ElementType="Icon" FriendlyName="'IMG captcha_name'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK8AAAAwCAYAAABnoirjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAArxSURBVHhe7ZpXiBRLF8fXdE0YUTHHBxPmnEFQQRTFLGsCBcEcUPDBDOKLgqKIICrm8KCgoiiKoiCIioLZe1fXa8Kc42rd+Z2df9+2nb0f39NsM/WH2uquOnWqes6vT9f0bNbdd9/d3bffEiVZ6zxa+37fX8j6s/I7fPElfiXrzwTBlKysLF98iUUJmA0oTjR6eRV2wWnKzOvlVdj1S+a1A595vWIigzfB65/vEsz+5TOvV4ykzAu3icyboNhnXq+Y6LfMaxR7eL1iIDgNmOWPUezh9YqBLPMmeA3gtQMPr1cM9Fvm/ctnXq+YKB/eZObNee8zr1d8pMybY/D6zOsVIynz5sObyLx24OH1ioHgFF7h1jJvjs+8XjFRPrzJzHvPZ16vGEmZF26T24b0Zd4fP364L1++uO/fv9s5x1+/frXjvLw8Kz9//rRzbCmypV193759szrsR8IH7djKHwVfGq8+HescG7WH7eWPQjvz65w+2mRPkQ+kNvlWkdQn6Tw8TufqzxT9lnmN4jTBC6gC78OHDxYIgSEI6P/06VMQUNoJtoIIqNhT8Pf582cbgw3ntGPHOcdRaQ7ZaX71offv31sb60DyrWP6KBxrPP2sDd/40Twag3ROn25iXTfXgcI2HGsOzUN7pghOA2b5k+49L2AQaIKBCBAgo7dv31qAEDW2OhY04SxLIAVCOKgcY6txzMExUs2cglNg0scx49VH/fHjx8Cf2sKQvX792o7px1bXhi9sacdOENKmNWLPMeL6Ee36TBA2um7dCJkgZd4AXjtIE7zKHgSvb9++rkGDBq5UqVKuWLFirk6dOm7QoEEuNzfXbIFDQZ01a5YrWrSoK168uK29RIkSrmzZsq5FixZu1apVBgmFwHbv3t38lS9f3l25csXGCx7qd+/euZIlS7px48ZZH1Ds378/8F+vXj3zRSYUcKylX79+rkiRImbXuXNna2c+SrNmzWxOCj5Y3x9//OEaN27shgwZ4vbu3Wv2yq6rV68221GjRtn8ApL5wnN269bNrvfixYt2rjkzRVx7wGy64VWwKdWrV3c9evRwI0eOdCNGjHAdOnSwoNMG3ARKwM2ZM8cgx2748OEGXp8+fVyVKlUMxH379gWAdurUKYB84MCBlrUQ/fgEXvrHjBkTjNm1a5f5Z01Adfbs2SADY3Pr1i1rr1WrlsHbpUuXoI+6VatWBjZro2RnZ9vcbdq0MYi50ZYsWRJcO8BWq1bN2p89e2ZtSP3o8uXL5rNRo0a2ZvUxZ6boF3jvJ/5Q0gVvKhF8PYLbtWtnwX7+/HkAG5o+fbqtOScnx+yVwQ4ePGgBBibsCS4+AI2bgDGAjRR0QKB97Nixdk77nj17zM/cuXOt5okgiHh8L1261Nq3bNli6yPzan3UTZo0MZ8cUzQWnTx50vqAfseOHdbPzTl//nxXpkwZd/To0aTlr3vjKVOmuNKlS7tTp07Z9TIOcf2ZIj63gNl0Z95UImAAAghkVMADMIFLoGfMmGHw3Lt37xdAGAcAAMU5geVRi+3169ddhQoVXNu2bQN7Zd5U8JKNt23bZlmUJ8C1a9cCULp27eoqV67sHj9+bOsDXoHG+Ci8FMR8gHj69GnL7DxluB76z5w5Y2NGjx4dPB0Qc1LYipDptffV5yHfmSA+n0KdeQkuj+ibN2+6li1butatW9u5gkU/2wbWfP/+fXvkEkDab9++bdDVr1/fzlH79u0NMIAAUEDcsGGD9VNSwcuelDYy48aNGw3+9evXmz1zsjVhL82a6ANeBGSMLwhexgM5a2nevLmrW7eu9XF9QFypUiVXsWJFm0Prp7506ZJd19ChQ20O5pXPTJLFXMwWNngJCGDwSOURyR720aNHQZ+y27Rp0wxCvoDRRt/58+dtT8nYlStXWhtBBl4CDwRPnz61fSUFQNCbN29+g5fMC0Tbt293N27csLk6duxo/RMnTjRgN2/ebD7J8vQxriB4kdaOsOvVq5eNxQfwonXr1pnvhQsX2rnauS7ajxw5YudS2Gcm6Bd4cz/kFTp4WQsAEli+bG3atMkelQScQkB52wCQ2GBLZqUAGV/cXr16FcDEFz8CzzEwL1u2zGwXL15se0deR6WCF187d+60+Zo2bWrznThxwrIjb0KAHniYn22ExlKi8DI3NRJwvXv3tvUj9eOzatWqtk8Hamx5ArHdYQ08ZWQrf3oiZYIEb+6HQpB5FUiBhYCFILEF6Nmzp2XiY8eOWTAVtNmzZxuQvHYaNmyY7R0nT55sX9h4JOMP39iSecMg8eoNAIGRrPpf2wbeOjAvfgGeLQxZm8zPOOZgHdxkjEOsn+0O7VoDhXbWpVdhjGHfqzH6DAYMGGDXrP381q1b7UZasWJFMEemSvAasxCcm0Z4EYHT2wLVCtLLly8NloYNG1pgaaeeN2+eK1euXPAOuCBhH4WX8WRQxvNe9cmTJ7/BS+albffu3daGatSoYUAyjvfAyoJReLl5yLwAhwSr+qlfvHhhr7x4L62bEl+IfTZz9+/f387JuGR3tkj4ymTxucCrZV47SCO8BDWcJdUGYNT8okaGJHjqR1OnTrV29q3Aj224CATGROGljy9HvE7jxuDVE/1heHmdRhuZVzfX+PHjbU6yIjeVfEXhpY0vY6yZ6+BccwMqW6A1a9bYliE7O9v6wwAzFz+MAD/zU/PjBuvAXyYrgBdmHyT2vEZxmuBVwK9evWqPcAJHIKl5DcUPB0AAOEhBZs8LNHq0ElRlQs7llzoKLxCwzz106JD55vVTFF5lXh7ZiC3C8ePHLVMDHvNhx3xReOkj8+Kb9WpdZGRety1fvtyAZMtw4cIFu1bGctPp5/AFCxbY/DVr1rQvrocPHzYf2GSy+Exst5DgNu2ZVzAOHjzYgsk6KASeoAEGASRTYis4eWFPFuRHCoKPaKdIso3CKwCAif2y5kyVedk2aI34Q5pPXyKj8FLr52GuQ18m8Qe02LPnPnfunNnrhqUgfNJHZmYcr9P0NNEaMlV8hoUq8xKYAwcOWJZlX0nAAJdv3IsWLXJ37txJWv+rmTNnGgj88IAPgRMVvvGDP2DTfNRkYP1YAFCTJk0K+gQvP1L8FzRkZLYRvG0g4zKemr0s44GXwg8ntWvXtpt07dq17u7du0kP/0rXwFxkYN5V42PChAmWvXUTZbIM3gSvD2CWP+nOvBQCTkHU4S0AQKQSNgJGtlEBKO3MoQwne4QPhB/90kUf59gyXr41JizaZId/xlFrjnAd9oddVFH/8oOt+lJdYybJ4E3wmoQ3L/8gjfACEF/MCFA4gNFghsUjXzAg1VHhgy9XEmMoYRjJyPgDFCS/ynZIkEcFWLo5yMKIc24EiSxKP/Mg+UwlxurfPlH4Mwi3Z6rgFF7h1jLvgzRmXoLFi/lwdqEmwPRRwgGUaFNWK8gG0QdI+Ncc+NZ42pAglK9wxlMbdSrJNmxn54nj8FyIY5TKl/o0rz4D+acuaA2ZIoNXmffvNGfecDCjAVawdB4VfZQw6AUJX/InO8YhzSuFbXWO/tc6KGGb8HwUzcdxKkXblb11faigsZkiZV64zc+8aYTXy+v/keA1Zv/+mJdPsYfXKwaCU3iF28S2wWder/hImRduk5nXw+sVD+Vn3gS8yrweXq+4KIAXZh8mCKZ4eL3iIDgNmH3oM69XjOQzr1ds9Wvm5SCZeX3xJQ4FXh9+TDD7KEmxr30dtzqReRMUJ0n2ta/jU393/wB0LNdK7QdZ9AAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:UiElementExists DisplayName="Element Exists 'STRONG'" Exists="[bool_submitClick]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aee4765f-6774-4cf1-bd7b-1d66e874bf20" InformativeScreenshot="4e50a6f2eb02b002d0ef84cebe64686a" Selector="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='STRONG' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Incorrect Value(enter the same as shown)' /&gt;" TimeoutMS="3000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[bool_submitClick]" sap:VirtualizedContainerService.HintSize="663,304" sap2010:WorkflowViewState.IdRef="If_6">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Default="Enter the Correct Authentical Value" Name="str_catchCondition" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw Exception="[new BusinessRuleException(&quot;Enter the Correct Authentical Value&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAh4SURBVFhHpdd7UFNnGgbwWBURCAQVtu0/OzudcXVFVEBATdWKLVvkIuEmWAoUtOttqsICIiqKiEQBoV4xut1O1d11lW4RvFTSQ0ggECABkhAIIF4QpXZTt1Pcdbt59j050QoBq+07804YhuT5fe/58p0D70XLi3kQM69mgJlb02+aU9OHObIeeMqMmCM3YI5Ci3n1Gmr1kE+jsptaskhd/WvrW39Z+TDfSnwY05BXzQNQOPVtsIDZsm7qLnjWdsBTrsWculYCNMOnQQn/phoINdfNS9oudy/TVgitH/Vy5cs8Evoy35t8mIfwrvkGXjWDFH6Hwm/Cs+YGZtewgA54yPSYLW+Dp6IVc+ub4KVUYUEzC7iGpW0VWK67iKCuM+qwXsmLT8SPeZTvywyZLeHMP+HFDGJezT0C3OVWT+EelnAO4FHbRgg1AVTwbqiHb5MMC1qqLYDAjnN413AGK3tPDMX158dYI8YuP+Y/Elo55jPfgQXQ+C2rn0fh7AQsq6fRz2KDLa2jn1lAK02hGfOUjfBVsRO4agWcRVh3GQsAAcyr+/PGRvgzj/MJAFo99fcU/i1N4AEB7lsAnjLu2nvIDJbVs8GzZO34nawVs2pZQAvtBRXtAxmE6itY1n4RgfrPCHAC0TcLQeFIGNhhTh5Mt90X/sx/hRRu9mP+bQHMZ/5F/ZCC2Wt/l177afUsoJNCtU+DR/ZseTMhGmgjfonFmgoEaM8juOsEIm4UIe52LpLuZ2HN16lD1tgfy495bKKm8EdWwHfwkpow84tbmFnRS92DGZe6CGCkcP2o4Wx7yFtoLyixsPkKAf6BgHYWUIaIXjFib+UhaSAVawY3YaMpRWKNtqxewoY/Wf30c31w230NLqnlEGRWwjXrCqZkVVFfwtSMcryaX4U3/t48BoD9KjLwbZRiUUsllmvPIMhQhugbuYi9mY3E/i1IubceGx7Em63xFsAQXX94fP4NBFnXwM+4BudsBi67FBDk1sM1rwFT8pSYmleHabkyTNstxbSdl/FqbhWmV2qGAWbLVZhbJ4e/6hIWt/wNAa2fYEVHCUI7xVjVtw0JdzYh+e5a/OF+PDY9iJRQ+A8xBMD0M/1wSL0Kp+214Oc0wnmvBi772yEQ6+B6UIcp1FMLdXArbIPbgRa47a+HW64UbtkVeOMCNw2P2hY6lBQEUGB+fRUWNV/EMs0pBHcUQ2TMQUxvBuJubMYH/Wvx4b14rB+MHuAtqn6kmXn+a0xOk8IhWwnH3Wrw83RwLjDARdwJQWEXXIuMmHLIiKnU00qoDxngXqyD+4EmuOfJ4LajEr+tUtKpKMdcuRReisvwbziPN5s+xTL1MQTr8hBu2I5o4xa835eCpNuJSOmPxYd3ReB5Vzz8H39nI+yzVXDY3QbHvA445XeCX2CE8wEjXA52Q1DUDdfiHkL0YGpJDyE68XppR/evSg0F7kXqdPd9CuVrBdfhwbCA6wSoxALlZ3hTdQpvNR9BiC4XIkMWAbZide9aJN5MRPKtKA4w4y+DmLS9Gfa72jA5Vw+HvE447qPe3zUcUcghBNl1+M2Wz0us2+dpuefVJk4vr4a3/AJ8FefgX/dnLFaVIaBJjOC2TIRqMxFp2Ij3ehKR0LfaAlhzJxw8t+Iu2GW3YlKOHva5Bkzea7AgHKwIpwKCiDmESzoDxyCx0pppUzM+ufrYW3aWAGexsP4kFisPYplKjCBNBkLb0yDSb0CsIQ7x3VFIuiFCys1Q8FwPGjFxpw52u/SYtNsA+z0cYvJIRKaCwgvgFFaabs2zKZ+/Xm33ln0Kv9ojWKQoxJIGMd5pzECgKg0hmnUIb09GlC4e7xkj8b4xBCl9gWbehGwtJhBg4q4O2OV0EKLDgrB/FrFXD8fQIgovAV90PNWaZ1PejCTfR3aKAIcJcABL6vYgoD6NABsQ0pIIUXsCYvTRNAUR4jt/j0RjQDdv/HYC7NATQm+LYC8Ji9hQBccQAoiOgR95ssCaZ1M+X5UMzK85goW1+6n34S1FKpYrUxHYuA4rGhMQpo6HSBOFWH0IYnXvIt4QIOS9sl2H8dm6URGTrAiHiKNwWnmYDQc/+nS3NW9YeUk/FnpLi+k0FcOfyYWwdieWyrciQLEegfUJHKBJBFFLKCI1QYjTBzKWN76SpTONhbBjJ5HVDIeQQlr9cfCjTrEAMz/qtM3DhXe1uNxbWghf6R4sZHZCyGzF0tqNCJAn4526BAQ1rEKoKhwidQgL4MLZGrdNxxACTxDjR04inQ6n0ENwiihjw6n/RJDTA9a3Dyvf6hy1nzTHvECaToBUAqwjwAd4Wx6HoPpwBDeEm8JUoZutf87VuG3aGELABkE9kb4Z9usq4RhWah0/hXMAdhrl1o+wKaF002Yh85FkCZPMBMhWM2/XrpIEyiPGfjYkxBCLGPcsIptD2KXVw3Hlx6MB4Bx5ctT98PKVqc0nBCw9AjExXUUTKIHT6AA4R5QNOYtODB/rc8p1RWGMa9DBUR5QM7Um3ggEB6EzIPww7YETFP50DzwLAAGojw+5hB8rd1l51OaZTxByKEYQXCwRBBeZCAACjDK5TK2Q2jwaYlLKF3AKP0qhEg4xOgAEAAGoj8Al7DAEoaXUJSAACEBdBAKYCTDGfqBLQY2RiPEZLXCMOEaXgb4J7FfxlwHyrWljVKZWYoOgtlt3jaZwhNuMkSziZwF+fA58bnGTMLOQZxH2SRe4S8GeCZESAlD4iwHMBPiJlY8sbk+YRiIsk6AAuilROBvMhTvTfWIMgIkAP+//Q0tx06BzgoVwiPHpLZicdBF8uj8400ScKZR95YKp6fcEGCLAS676eZXJnphahhCmJ6fmhKw22P2xge6WX8Lxo6/gmsr88Fpa9cPXU86PecseXjze/wGADjhbeB2rcwAAAABJRU5ErkJggg==" InformativeScreenshot="74a4973b50027cfba35aef430047522e.png" Selector="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" Url="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="739,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ended theEnter_the_District_Taluk_Village_Patta_Number_and_authentication&quot;]" />
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="785,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="ui:BusinessRuleException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="1244,5383" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If Condition="[str_catchvalue.Contains(&quot;Enter the Correct Authentical Value&quot;)]" sap:VirtualizedContainerService.HintSize="1202,5334" sap2010:WorkflowViewState.IdRef="If_7">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="781,5176" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="str_inputDialogValue" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: View Patta / Chitta | eServices - Taluk Offices" sap:VirtualizedContainerService.HintSize="739,4811" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="293cd92b-170a-4720-a6be-65ef1f98d9dd" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="705,4595" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[bool_district]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                              <ui:UiElementExists.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4a84ece8-4dfc-4f39-bc71-119d63f6ef1a" InformativeScreenshot="aed6ae7bedb19365b0422bbe21cdcf3c" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='View Patta / Chitta | eServices - Taluk Offices - Profile 1 - Mi*' /&gt;&lt;ctrl name='eservices.tn.gov.in says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" TimeoutMS="3000">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:UiElementExists.Target>
+                            </ui:UiElementExists>
+                            <If Condition="[bool_district]" sap:VirtualizedContainerService.HintSize="663,469" sap2010:WorkflowViewState.IdRef="If_8">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw Exception="[New BusinessRuleException(&quot;Enter the District Name&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,310" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'District'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="WindowMessages" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Text="[in_districtName + &quot;[k(tab)]&quot;]" Version="V1">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 332, 168, 23" ElementType="DropDown" FriendlyName="'Please Select ...'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='combo_box' aaname='' /&gt;" Guid="6aee094b-3782-409d-a8c4-319ab8e109b1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKwAAAAbCAYAAADh/mQVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOnSURBVHhe7ZbNdtsgEIX1gD7Jk7TpIkev4uwTW+3eeQ6frJt27ayjPWFgBsMwCOy4rVTPPedG4kcYwceNusfXd/P40xquZC1reabl7ul1NE/2Rq96XcLVAuvJhWvf92r17Ex8+oT9BeSOrkGlmqOATeLUJSylq0o1RzlgkdNu48hVYFXzFbDpObUJu9GEVc1cDtg4YcGfBfZlfWNW/bM5YPmq9fZs7m9vzHqPZdWnRAkLdgkLLgF72PVmZRefm2/G4oFFyGrv2aQ/BuyLWdtx73fXFQuUsOBuW0lYD2xvdm9YAdo/uM2MF27RwArvA6LDejJ4CuxFlSYs3FQTlgFr5QC9fbBLGJUXCayHYLWmN2Gy8O0U2ItpM2zNOI5YOgrqtsOApVQe2ChhwacCy+tlYBGGYD7Owez6uN1b2hBKu6l+WZ8ShIkqwErKPh+OB9epAGzT/LKxqR9fS+8lwQuwwpy/frtLoIV7qIM26MMFbBKn/pPgjIStAosLHy9oPhYAK2/29HNW0C/acJ747SDSocnfURR+PsQwZr8tANs0P/HTxPYL6+qfWRKksQDML3ceTII2hhXaYpBJHlibsNZnJywHNC0jBBksvn56wfmzpbEiuY0WgHP17EBIklJNBLgEjK8PgHJgm+bX8J4LBxbEoa3BCsoSFug9BVhfJyQIASskDMn1Y5vi04eZHwZbV9qo9LBEcvOQwCvJA5HOJXq+BB7CFubH3r9pfhNrdtTygQXF0IKnYAUdgbUJO/wezVBN2HgDwfmmJZuCi58/h876xSmISZNsMNYl4xyfEYGPPA3BhGh+dMAcsPn4wdSPwdc0vysCFkTQ1mAFAZvEaQd/Tk1YSRKwNVD8RvJ/2RKwTAQS9kl++6JicykmLJMEbG1+VwYsCECtwQo6I2FPBJY2evJ7rLSRDcBa+Xkh7K0gSbKgrIsA4CdCeI9GYDh8TfNrWbP/C9hWZQk7XDphQfjvM1tcWx/qhI104wAkCfz89/nmYllMa17HRGmdvSONmdbTJxJPQqgPdVlaNs5PXDMLKQ+CymGOVZqvX2f+znhATxj/b8gBi5x234Fc64sD64QLkFgGgLze55vC+zgLSdTaL5c0z4lnA+SxI/AyYL2a5ieMnQFcbMtFv7l0YIFTcDVhVap/rSxhwQqsaq5KEtbdWHoVWNVcFYC1nHY/kFwFVjVXAZvEKSbse4BWrZ6bic+QsGr1Uhw+CXhDbG2X68naLteTL9c+mg8p6FasQOmkOQAAAABJRU5ErkJggg==" InformativeScreenshot="0212429d41ce884b8d56a1dbaec3423b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="183, 334, 66, 19" FriendlyName="'District'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='FONT' class='bold_text_black' aaname='District' check:innerText='District' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAXCAYAAAC2/DnWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALnSURBVFhH7VWxchpBDL2/yiekSRxXrskPeAZwnbG7OIXxDDQ2LvAEDGncxTRxmRljU6aEo0nh/twr2pX2Vtpdww0JVa54iJW00u7Tu7vs66KAIaK22mbDxQsMl4jaKovEEEM1NKxiRpapwtpRsP5f41YxI0Rttc0sS1tjBceHe/Dug0Ebjp9SObvArvsukRhmaLR4gKZtlEZjkHOeRK4P+BjGd4Vd9f0Fz/tvofh8T4q5sSzNoFUS0YOzkr14OpTv4dah3RQ/O03Xrbp/2/jloM1996A51fEfP+/h+eiAFWMCSjFIjPUzk0iaj3WJNBXfbq2IMVP/y3pV1xeSmLsw/htWzTeQGZYIWjGd0k+QLDcGq9LfSUzd4ukWGmU9gcNbuFQqDGDjuH/aK32mn+9PZ3u1b7BXwtTx+0LwneffoXj/yTxKBRYzTD3oRwkZtH4XfxQXxcNfcFw/DpwvDtacuvpoDVl8cbNWl0PF+H4Yv+uWNTS69gJR33XnYb99T+J//ShxX3Vf/Fx7ptcrRivAx+PJSTUk6ghUnbpUqENy74Y9DpKYFr9jQiAxxNDNUiumU/rZRsSQPz6g/GJ4tOxkRD20em8Qn3rF0CV1PO67oZ6wmph0XjbGn3GOSCiG/GwlMfg49NkvD3My5/y5JDHA6ays2/ni/LgXL6f6yelfr7z/1b4rOBFfz6iesP1rrZhUnlWMWaxTjInHL1+KqwPy5KgexpMvYJ8XTtjtszahGBlP9Q3ryfNL2w8UE8aNragYOQ2MCWbjyZE/tKm8f6sYrQRDpqonbCXFjJmhcUIx5M9jiVo/xcPJOYLdJChPEOseQ+MXl/f5jEAx/pyEuG/QR/kpn+qgTyjZfKmopq6fTZAdwgzanJzCR5yaz8XNbM/l1HFy6+rIGm7/lZieBRJ3ZeKCtLC3gVKb7Ssg9kqo/lFOD85FDaGY2korFFNDIpsgO3ZRW2WtYr4ZR22VFYop2NbrSf4CfwCQO91m6N/TyAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[bool_taluk]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
+                              <ui:UiElementExists.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="139168f8-7cd6-4a6e-8f4f-f4d096c75296" InformativeScreenshot="b487af5c09fa8cd7ed811619837f539d" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='View Patta / Chitta | eServices - Taluk Offices - Profile 1 - Mi*' /&gt;&lt;ctrl name='eservices.tn.gov.in says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" TimeoutMS="3000">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:UiElementExists.Target>
+                            </ui:UiElementExists>
+                            <If Condition="[bool_taluk]" sap:VirtualizedContainerService.HintSize="663,469" sap2010:WorkflowViewState.IdRef="If_9">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw Exception="[New BusinessRuleException(&quot;Enter the Taluk Name&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_8" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,310" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Taluk'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="WindowMessages" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Text="[in_talukName + &quot;[k(tab)]&quot;]" Version="V1">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 358, 160, 23" ElementType="DropDown" FriendlyName="'Please Select ...'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl name='talukCode' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='talukCode' type='' tag='SELECT' class='combo_box' aaname='' /&gt;" Guid="7e345e2a-7ff8-4e77-8840-3d950e37b73e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKQAAAAbCAYAAADyKSThAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO6SURBVHhe7ZdNctswDIV1wExykjZdZHQV5wKN2/w0G+ccnlygaXfOXlmrBAFIJAhSdMe2bAdvBpEJUjRJfHpymp+/u/6HC7jmwvr1PIf163mObfqb+7cPbLxh4p6uY9v6rf9w/d4hOdq2tbA4eIQMOod0lBKMJtMcAvaYwwb+sDuaTHPIA0kc+t+QQKcBaZpL6JDIoXdIe2Wb5hQ7JETzsCOHfF1c9hftS7+h9qfW+0t/c3XZL9bUNhUF7D3Ab0hwSP+h4JCbVdtfuMOVIQ/75IEkiKb2WaW9AfnaL9y8N6vzeuy9QxKH3iEByjKQbb96pwRofeuLFR7MSQOp7AfED+PWYBmQWwkdEjn0Dvkw6ZACSCcP4NWtO6KgfZJAYpEvFrwTIQfXyoCs1vflXd91HbVGQe5uuaRWLAQSOWwe/8chnWReB5KKPYScZ9Ov2rAfQztwdqvSuGRMDrJIE0BqSl7v44PplQGyan3J3DxOniXGMcEJMMKavn67jqCEz5CDPhgjlTrkPoCkgw0PLJ0LgNSLWb7PCcYFBZWOXQ8aPxTpHlXR6z2ELfluBciq9ak/Hdy44VzxnmOCMBSA9+UawWMoQxihLwSVNTgkAPn456MHl9wWSAlg3KYiJzBgvnyg8t7cXIF8IRWgfF4Ar0lzJRXQHBCYHwCUQFatr2KfRw4kSEI5BSMI2GMO3St7e4fEnOIADKTiECw/Thw6uocICbvL5QoRPwyB/Do0sHLCgsdrCe7PgUUwDesT+69aX+HMRh0/kKAQSogSjCAPZOyQU0CGBYJIixIdOh1ueh9FMi50MXKKqICUi+YZ71GBDqJc5IJ4ffwAeSDT+YfgcQKuqvWdEZAghnIKRtDokP6fmq4CyGmX0YCcAgELJV+pGpBCDAqNib57pxJryTqkkAbk1PrODEgQgDgFI4gd0gP55MiE2CmQXMji76FcoSqAdMJ1Ecy1oGhyICyyBaZX+LCPSiAkXFXrqzmz0wKyVsAec9g87cMhQfR6Sw7P5YecUig/D0AQwS2/XxaP2qrbypwQu22yR54zzvNPGOlkkB9yidtVrk89MwehfNAnHtZQufXiOcs90wO4xfy70AEckkUbjEIvMMdinR66HONDcZLacam0dRbuHSAOIwArARJVtT5l7gTQbF8q/s5jB3J0SPhQcEiTad9CIDvPYfNrwiFNpn0L2AMOIZxDIpkGpGkuJQ4JYUCa5lLkkPihG6C0sDh0MH9wbZ7/IpnPPuGu1rb2jO3IIe1q13mvXf8Pp4s9NIOcqrcAAAAASUVORK5CYII=" InformativeScreenshot="573d86d1bc2165238d00323146e9c19c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="183, 360, 49, 19" FriendlyName="'Taluk'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='3' tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='bold_text_black' type='' tag='FONT' aaname='Taluk' check:innerText='Taluk' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADUAAAAXCAYAAACrggdNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJPSURBVFhH3VSxThtBEL0PtEKTHuEfoLDTpsGisCUKfGmxoYgUfLbLGNFE6UAxpauIo0qXznRIm53ZGd/seO58jijgisdjZ2dm9+2bc/Ltce2ahuTa/7nOPRrE6BT80yROUF3+HFQ2hMP4NQzo1IQUTlDtK68XqWsdfEAcXea78431eT/Utw467mS5Ox+dmixn7ogOroZv+ouK4VWIK9fflahd+cY6ElVx/o+vn93Lx1OXQACUSh5ddqKL6P29WDlVu06w5ZSZ//uPW42+eFGkVPK2qHh/L1ZO1a4TbDlVln/78yI4lZFS5rESpfez/N51aV9D5uMLGk5lee5OjrkmdcNN3zh+TvGhcgr7q0+mu4D4X7c6O+Txi2E6FeHOi+JRIJhjVhbXl6fckvj2+MH5OlYgAdXZk4fg8ZVySu3bnLseX+h47sYcl6KugovZk8gFpzZ97PhwwLGO6y3lGhyCOq4PTOMXFDJvj1+8z1yMhUZ4ZcyrNX7c147L8ev2t6dI38s75ReokLnMqWI/uykuWryoemXOr+0U5Ntx6UyEwT3VcT2wdwoXCpZTEvLlevjhAgxRAOVUZW5JPJqI/kzk8A9EjGTq1WlIp9r+deP9+OB0V1y4WvTar0cqv6kHH3uYuzb1jOsD0KkpKWTWTlXtw0thXDgCB1lOtckpyJc9PtFrT6NftaJHqiZD17f6d5u+wP/hVEDxeoTBfA+nSnr4S7frOIVx6WrcOwF1uEAOat/7Opn5gAVItOKMt7xPTrHiZnCpU+8ZXtSaFk3htfsHpwgfYnmllaQAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[bool_villageName]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
+                              <ui:UiElementExists.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de2dc0f0-21a4-4835-a613-d0c50dcced94" InformativeScreenshot="8ffc9761120cdf66a22472e544551856" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='View Patta / Chitta | eServices - Taluk Offices - Profile 1 - Mi*' /&gt;&lt;ctrl name='eservices.tn.gov.in says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" TimeoutMS="3000">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:UiElementExists.Target>
+                            </ui:UiElementExists>
+                            <If Condition="[bool_villageName]" sap:VirtualizedContainerService.HintSize="663,469" sap2010:WorkflowViewState.IdRef="If_10">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw Exception="[new BusinessRuleException(&quot;Enter the Village Coloum&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_9" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,310" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Village'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="WindowMessages" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Text="[in_villageName + &quot;[k(tab)]&quot;]" Version="V1">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 384, 296, 23" ElementType="DropDown" FriendlyName="'KALAKADU PART-1'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl name='villageCode' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl name='villageCode' type='' tag='SELECT' class='combo_box' aaname='' /&gt;" Guid="66f49b51-0fd6-4d50-89df-2201ca664067" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASwAAAAbCAYAAADGdbLUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARySURBVHhe7ZhLUhsxEIZ9QIqcJCELl69iLhC8wwTMPjdwcQNCNrC32U7UUmssabr1sHmoiv+rasYzntG0xurPbWbXj/vh+nFnAltsscW27+1s/Xc/rM0Otthii23v2xn9IXPRdrFYIBAIRFfh/WSFdUPmMkFvAABAb5CbbIdlwnZYa2MwCAsA0CNWWOwpdFgAgK4hN5GnKJyw+P9XAADQG15Y5CkrLAoICwDQI5MO6yb3P6zt5XD2bTFsXng/4GF5bt47H+abZz4SYK+j9y+HBz4U8rxZqONK+HudLaXRDEfmWRrX5cnnRCHPy897ueX9iOdhszDXanMYeRiWk/uZWNybESR4XHOO+FkYxnkmEZ6vzzUO7R4S9r7F+QKgMwqLOqzfbK5WYfnFnS1MM+ZcOadJWC/3dpy5GS8visY8K8bV8lQl+JbCis7zUhLy5LnP7TOXpebyTa7lXNV8snOpgJ8vhAVOgdzkPXWUsPKyMvBCXW71Am0RljvXFNs4Lr8RckSeNeNm8+SCjqSVLfJThGXwgk0kaWVEohKegUcUlkE7bsnOJQNfNwaEBZhfq6tht9vx3gE6drVa8V7M2GFZYT29WntVC4sXY+5nwSiC5HVIVgQRYZFnCr45z7pxS3lOCp7v+y7CEo+7Y26e4euYDxXWSO18wVeAZEXr6cfPi0ha9JqO0Xt0TorvsCjaOizlGz4mWaTKNdXCSrof9brWPCvHLeYZ3nfc/0BhJfdvExPno/1vLDuXGiAscIDE9P3CiclLK5QVvReKzBML68m9KApr6wq8uPgSEWhFUSssd15QaJqMGvOsHbdOWMF8s0V+orAmz5ZFFD5b5f6SsJrn1gyEBWJSaZVkRUw6rLKwaLH7yEtmIgKDVBjFYrFIC14WYFue9eP2Iyw+FuXnjsWSlWXnhJVE+gxTlLm4ZxKPddp8wVcilBZFTlZEJKzbp9fh1nRZJWG5ouBiUAtYWaBC91IlLKGjIMRrW/JsGLdOWMH7bymsNNLr0nszUjeVHvPSSTvKiOxcaoCwgIyXVklWBLnJe2p2W9VhhUXhiykuCAuLICqyMIJv9Bph+aLSIiq2hjxbxi3lOflJpsjQwTnVCqtwntg1BRHmoEss8xlAWOAdIVGVZEVYYbV1WMmi9mJKflJIReFJC78srFzRciGE96/Os23cbJ5iQWfGz8ospEJYPJbcIU2vlz8bnq/ymUFYoAdch7XnDoteNHVYDC/mw2IsFFlSYEVhFYplcn1tno3janm644owxHvw80kkL1MWVun5pYJSv0yULx9L4VmVgbDA6YzCog7rznRYd60dFuOL1i72isUdFs14rRiXwzrTrTmSoq7M80/juHqeuTEMXgRhVBduSVhCh5mSfEHkul8vpsl4xwrLjzeJwjMDQIDc5D1V7rAAAOATaeuwAADgE4k6LPoDYQEAesUJy3lqtvmHDgsA0C/kpo3tsF4PHZaXFgKBQPQUoaNsh7UxL9zWBPaxj33sd7o/szsIBALRfeyH/9ywt9p+JMncAAAAAElFTkSuQmCC" InformativeScreenshot="fb775fcc48eaecc5894a3be48a42b303.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="183, 386, 61, 19" FriendlyName="'Village'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='5' tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='bold_text_black' type='' tag='FONT' aaname='Village' check:innerText='Village' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAXCAYAAABUICKvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMSSURBVFhH5VYxb1NBDH4/sAoTM1L7AzIkSka2plIrsURpNoTSREwkeWVJFxYYSIdm7YASgsTGRrohY9+d7/n8/AIVKjRk+OSe77Ofz/f5mmy82oDH92A93qj1/7yfjT9vYIIgy9i3NSqBO7K/NqOucGf4731buzfBOffYRiXcH3NoPanBgUMXeuyfdYOvBoeDZeAu4bhucB8Jsgl15GYMh/pAOCuOFDrWO+X9GrRm5P+YNoH5ugku3miCyv8v1u9fP4cfTzteCdOkyHBI52eb3vp59BtWNOEoKCHN/4v4v2k/fYXbVz1uwgYGg0Ys/uB07kiMqTgY7XGSuC/XxjhUNYGxNd8Dr999eAkZOaZr2hC3XZ/ARSATLkSDSCXT9R36l9BRB3N5lBJ8fsV18ejHMTwKXA33nfB9Xx/iSlwGod6FVpKX+bq+AkX9xP0Gty+ehSYgqCvnce4bcHwTElqHdfzUT3Pu+FYTKpTgmyDWiFLDg98cs6SJRW3k929cAzrhHPaYegglIESn4wHkh878KHj+nyiB4gXiDZIVigyjN12rNynGW3mFL8Yrf32cKD0qwUOOhCdW3YzZBEKFEkxuaU+Bi5UXwQcrxYa8iTqqkNaQ5dilHGeEbf+MiSilxSrp3lDwcnW7ffYnaloFvsjjuD7PcNCM3CL/HNrRN0Efxsu3ANVY1GvkTbjXgcd82zol5KEjzoqbbM8KZdCtJjzjFnQ8KyFX3P62eFRj0QSvhFzkJCUUdRh5DdWkdZetUgJBFBHRRFXwPvMtJSDUu+L5lhKMG3dIm+D918rH9Vo1yPrZJ89XXmfUDbcQthiJAPpwiVe+BedXSvB8o9jkO/4Vp/ih/L0ivtsXv1jbVz4+X6T/HThvMhLcSJlHnSe7xD8usTOJXUySx4Vmu8xbwok6mPOrN8HzV4rLeaSfY8aJQkbiuyP5hrj9LrQ5Hg82qqwvhT6PqYTdsUL69Fb8dlxqbSU8RksKq1RGE07wzdoav8WGJuwA5JxLuDEw+PcANuEO3oaOkHX4Uqz3YX93lPBg2MBPVFmLAzsptwcAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Patta Number'" sap:VirtualizedContainerService.HintSize="663,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Version="V1">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 418, 13, 13" ElementType="RadioButton" FriendlyName="'INPUT viewOpt'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='radio' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='' tag='INPUT' type='radio' aaname='' /&gt;" Guid="0dba3ba4-2993-48fd-90fc-a3634ab1b963" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD8SURBVDhPnVNBDoIwEOyjDWd5AFe9GBMTUZGzIA/QAzfeoD6AA72unYViW2Nsu8nQbDs7zC5FVA9Jl8dAsetpvyBRPSVvzAjMRxFOoKyhDm4drbY7WqYpJUnCK3Lsu3wWqSflmg8lbY4lZVlGbdtS3/eEwIoc+zg3+YXtRAkcSsrznAt/Bc7B03WzE6gW947f5BPggY9adjLaGrhnWPYJ8MCvVd0oAicKGJ6ewb8AD/yPk6kdfIWQAJ/HAJGrEgFinKDurEXQ2zpqJoYIKwZ+HfAtJxq4SF73RPHMOtGohwmfG+vWWE40YNX9dzAz3YIL0bxs1Zj8q51wSHoD6fH5/y64nDUAAAAASUVORK5CYII=" InformativeScreenshot="3e78f149dd9dd5e17a754eea2def6d3a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="385, 412, 125, 19" FriendlyName="'Patta Number'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='9' tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='bold_text_black' type='' tag='FONT' aaname='Patta Number' check:innerText='Patta Number' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAXCAYAAAAsnywOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARpSURBVGhD7VfdSptBEP0eUNqXyAMIiuhdvdV4F3pRQ6EQWn+gSltNi173IlLQJ4jU9gGExtvtzuzfmd3ZRGm1lO8TjpuZ2Z2dnT0zmzTvr3+ZDu1G8+H7zHRoN5qP9t+nm5npxvaOzcnNnenQbjQnlgknlhHd2N6RO8EpoJP/jbzbf2aWnhNWzdZlaX9M2ZJg5oWZ2Rut+kA0rHBwOP+/GC+PTA/P0Z9I+9kg2tbPlPVPNL6KJHj6PDf0IQBJ0Btdm9MfTp9Y6vVhjbcvli/Mul+/tHxs9jJ7rQru73+OfHksSYB7kB1JcO71uP6JZDUHf9H/PNmSgBjhIEkw9ZOtTVTTwOzGNd6+UJ4ACY4sCaRdJiDYkv2P5LwTiBisPesExfonklMOqBOU9seUuROMWbgz+1knGHumjLGSganYIQR8tfP6ohITeqNvZmtZt5GPfbu+/kRZMsb4/KjJuH9/EM9BF852IMGG7wTjm2uIi0gf/GX6sB/4oLxhHnG9yJc/n9sv7wS4j5sb8+nn0yj38ehfiPMLv1fgl+Z5f83w7SF/IEZUO4EgQTiUY291HlfbIn3y43yHTpDse6MVDjjNn2YXJOcXI3YC64f9YRxqJ9BIMEcPPgjuycQ4Hdh/Fk+IUxAk5qGWtxRHyj92WyKN5hfgvxuRv2ZnZ8fsf71iVmidgFg1voJq8gxmW7CDnHwQ84L9wmzMWS9JADZvL+RzqF5f0cKOsugEVCUpFqp8rGKWeX122dGfos/iiXmzEOeiXPB88EG58PGqcy3wTkJ8SeeIWM5NPgq/MJ9h5WYymZiXr99YYZaRYMoTJKPpkmbOkZ3P9qwKEHRBxDRMPDGaDx7W21GSIPNP49wnxcUp5qOsVF48J1UMkiDGW1a881fqeT74wHi0c2mdjPRprvt1EOMXvvUOo2HjTPdb5MeOze3trXmxuZkxSUFewVjdFszSzEfQze0EFgVbow2TDlVWqTwV2MWoE7A++e0ta/Fmlx39VfQP6QQVH9UcFL4x7xibjnpuExpj/9bW1pgVshP4wxBrtDFjaNAXJGC9QgLwJwINzwHZtQskvZZ08CfG4jnweqWDpXiVi5qnr8Sjnyvz4eMpLsvry3zq68P8fKz5xTF2gs9WcZCRgHQ14FwKbr5ekuDAzw0YQqDbNtBoy5K7UK8hI1KyXZvtmEyHFC/aBmaorgF9JR79XLqPWg40fdLJ3Guo5hYA3wlyEkx5Ar0dbnQLopy9tc6uPBF+fmKkO3jya0dIIr1laZ+SPGP7JuLlpTiz+MJYxAl22JeA8e6HXxFRn58PziFIkPKGF0CdwOkxfqpkt1/KzwpfVunXkcvFh3GE+d4/dzjaL/frSBDOhyP/Ojiwvw5I8ZBOwMiSSIfarnQIrfJwD9ybEToGVjLDHmZUJqeKaicgyJjyqsKKc1i13yHC58fqBCXyuAKKnAVAt71XJxi+O1QNHdqD5ov916HdaDRmdGgXZCf4CZ87uTVy9xy0HnfmN2mZcOB+TZ4nAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[bool_pattaNumber]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
+                              <ui:UiElementExists.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ed49340c-66fe-4366-ba4e-ddf037afa747" InformativeScreenshot="8fc7170c371b9de025ecca7a12ec2df1" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='View Patta / Chitta | eServices - Taluk Offices - Profile 1 - Mi*' /&gt;&lt;ctrl name='eservices.tn.gov.in says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" TimeoutMS="3000">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:UiElementExists.Target>
+                            </ui:UiElementExists>
+                            <If Condition="[bool_pattaNumber]" sap:VirtualizedContainerService.HintSize="663,469" sap2010:WorkflowViewState.IdRef="If_11">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw Exception="[New BusinessRuleException(&quot;Enter the Patta Number&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_10" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,310" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Patta Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Text="[in_pattaNumber + &quot;[k(tab)]&quot;]" Version="V1">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 359, 227, 28" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='text_box patta' tag='INPUT' type='text' aaname='' /&gt;" Guid="b9d0b308-06e1-44be-b1dc-affa76e7a1ae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOUAAAAeCAYAAADTnNnMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVHhe7d1fThpRFIDxuwQeWRtbYGst9g+1NW1KYhfADkpRGZvwiAMPGk7vN2WSGX3VuTx8X3KUAV9/OY6YS/pR7ePbbR2XN3V8Wj/Ehz8PMVvtYvZ7F+/yvM+Pm+9ee+31q13jC2d4wx3+cIjHdHW3j3l+YlEdYlM/xtMxzGyg8IY7/OEQj+ky61xs9vF4PMZyuYzJZBLj8ThGo5HjOG84OMMb7vCHQzym+bpupPKCGB1n+MEd/nCIx/Qx/07LCkUsPzCdTmO73Z6Wq5m9VTjDG+7wh0M8Jm40qd2SgjQbLry125LwmC5Wu+aCFxgzG7auPTym2er/phSlWZm69vCYUbopzUrWR5k35cXpnlKUZmXq2sOj95RmheuhdFOala+H0k1pVr4eSjZl+z6lKM3K1LXn+5RmZ1DXnpvS7Azq2ms2pSjNyvYCJf8AS6I0K1PXXu8f0kVpVqauPTel2RnUtddsSlGale0lyrUozUrWQ5k9uinNCtdDyabkeDsSpVmZuvbwmD6fUHociNnwPT8OBI/py03twVlmBcLZ84Oz8Ji+5i+VR0w6TrHBHf5wiMf0fbOPX38PHsbsOAMPzvCGO/zhEI/pZ7WPq9u6eaKqn5oVambDhDfc4Q+HeEzX94dY5AcIbT/oZ55vNrnhZPhrkOM4rzetLZy1H+yDPxxe3x/iH15CRU1ESDc9AAAAAElFTkSuQmCC" InformativeScreenshot="97bccb11b5942e6814f99e714e8a1851.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="183, 361, 131, 19" FriendlyName="'Patta Number'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl parentid='ptNo' tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='ptNo' type='' tag='FONT' class='bold_text_black' aaname='Patta Number:' check:innerText='Patta Number:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAAAXCAYAAAAhgVxJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARJSURBVGhD7VW/T5tBDM0fWNG1Y7fMSJmhY6dIgCJ17ADJVIlIwIoEKQwgdajCnqCqoVM3WKrr/fQ9+/N9CRFQVdzw5Jx958/ne37pnP28N2cLi2qrFbbjfpwvHryj2mrRRnJEtkTUdV0723EsCXDO9Luu69qTwzkzY+q6rtM6kgOZU+2L2+nYdN9umDcO/atm/B9ZUo7zxZXZSgVq8EWnvf8P9vt4j57ZmWJ8ZnY2Y2zz0BzBuRfF9FCQQ9nzgvj+5YP58+6j6UwsSyZ3FotrIMfAHCQ/shr9j7BHo148v2G2TkWcTc11a5517AEjR/wGxedml8gxNkcteZ7V3ogerHruueyPhbkdfgrKMfGMQeUYmH3y37MGd0cz8q9qOTlEXJmaUp51LFeOAFdDiOvKsUreJ7WiByufe0b77eqzVQ7HFs+YgnJY4OMSs5micHh1iOcbk0uw3zgdKP6AoDBYE0d3NKf6PKBeXOfv98xWP97DqYSPK8rhAHXRd9x+zY853J1EzbRP9IsU1EEqh+gL9pPA3iuhZ3ZvUtyimNfum7p9WDucvfttbvfeu7+VwJSJUI4D8vPJT8oR2F7elxSize+hTE2Gq8ldBHzsgWItLUBy7E7zHUMdMyBHUA5/rvQN1Q85PGJPxAOn/LyemBd74BD7UOwb5c79V/fKvIT0baxd9Nmi89UyJeDabNPhgRmS/8EMYfq3LYvzGQnIYZma/MdQeOO8YDeLqeDTfqzuyci128vbyaBa/NlCLkaCec6n+rlyUN9K94Ic1ItiD6CfVF/2sdq03i/tbVM5ML5cOXACGpMtpwYAk7i+cgS0/jUp+xHNSUX1eGrlgHpK99JyFHug5Mb3KCHdZYXetqGgHE3IiUc10FiNk7i2crBGpKksTGoBUjm8n/L2TJfI8fLKQTmKPWjmxl5y5VCwVDnaYclxHxZ2ojI5bCGWOSGW4rhWGuLjkMOy9zju5+RwPsh3w9mN32MPa6c+xPg0DWF/iPM1J0eKY/0RUC9/wFnO1/C7/YV62NTah0n1aTnYI7oepPqVfqo1FO6v9hbiS9ZeOS7cgilHePDg1yxXiJMl/hOhHCyfwu4Qn5s9QcB2v26RHHtROXwcmuyB92APMM/5VH+hntK9RA7vF3vpe5offVHtaL+0pbxkcUhEfyyyciBL3SUlk+h3WDflmisEm0Qokk2ij/P//XAmxJuKY8Ee1T1G3O9tQs6vK4eL48RbYL2M5M4f8nNJf6RypNyMHG3KoeUNYH1O+30snnHfc/dfqhz4DdkfqxyOJQG6cpSBExPQHY0bykH72aM64Dfw2wFJYfLjRvTH6qSWIJWDxbEmWS8+WER3E8kRlIP3AepRptZDKEfpWwRZF6HZs4TUu2INBKy92R+vHO5HshdiXeOvNx6U45dzVlstt5YcnDHVVpusV47LyJRqq0XrlePS/siMsUG2rvHXGb83fwFRwhXeRS4u4AAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'IMG  captcha_name'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetOCRText_5">
+                                    <ui:GetOCRText.OCREngine>
+                                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                                        <ActivityFunc.Argument>
+                                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                        </ActivityFunc.Argument>
+                                        <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_3" Image="[Image]" />
+                                      </ActivityFunc>
+                                    </ui:GetOCRText.OCREngine>
+                                    <ui:GetOCRText.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60edb1fe-3dbf-4e40-98c1-5aa8ad0cc33a" InformativeScreenshot="a36e060077f1490e6f5e671c327870e1" Selector="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IMG' id='captcha_name' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:GetOCRText.Target>
+                                    <ui:GetOCRText.Text>
+                                      <OutArgument x:TypeArguments="x:String">[str_getAuthenticalValue]</OutArgument>
+                                    </ui:GetOCRText.Text>
+                                  </ui:GetOCRText>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[str_getAuthenticalValue]" />
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[in_authenticalValue]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[Split(str_getAuthenticalValue,"|")(1).Trim]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[in_authenticalValue]" />
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:UiElementExists DisplayName="Element Exists 'pane'" Exists="[bool_authenticalValue]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_11">
+                              <ui:UiElementExists.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ea7e4bc-c8f8-43a3-b899-489d8ad41931" InformativeScreenshot="ac522296033d7a4336e0bbc6f07df82f" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='View Patta / Chitta | eServices - Taluk Offices - Profile 1 - Mi*' /&gt;&lt;ctrl name='eservices.tn.gov.in says' role='dialog' /&gt;&lt;ctrl idx='9' role='pane' /&gt;" TimeoutMS="5000">
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:UiElementExists.Target>
+                            </ui:UiElementExists>
+                            <If Condition="[bool_authenticalValue]" sap:VirtualizedContainerService.HintSize="663,902" sap2010:WorkflowViewState.IdRef="If_12">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw Exception="[New BusinessRuleException(&quot;Enter the Autentical Value&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_11" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,743" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                    <ui:CommentOut.Body>
+                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Enter authentication'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Text="[textauthentical]" Version="V1">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="372, 469, 159, 53" ElementType="InputBox" FriendlyName="'INPUT captcha'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='captcha' tableRow='1' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='captcha' class='' tag='INPUT' type='text' aaname='' /&gt;" Guid="56bc0f9e-f314-4ba2-b502-c95e4b655f5a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKEAAAA3CAYAAABkbiroAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKMSURBVHhe7d3BTlpBGIbhuQSWXBu3wNUJChWrjWmbtCkJt6BWCvUs5RxIavg73xSSObJqwvln877JxBx0+eRDdDHhfrW1u2Vts2Vj06faruIZP77a6HFjo4eNXcSvFw+vh6888/z/z6P4LE/jeORr+rRJ3u7ikb/w6Vdjs+favqy3tqrf7G1vRJ0lX3Imb3Inf+EmatQLf/Z7WywWNhgMrN/vW6/X43DOeuRKvuRM3uRO/sJ11CiZ+gb4OB5HzuRN7uQvTOJ7tCZSQvUDw+HQqqo6jCfR+ZIr+ZIzeZM7+QtX8ZdEdVxBAFKXyddxDZX8hcv4iUXpGzpEXZdbk78wjnOoQEhe5dbkL+hvNwqE5FULoZbwkiUk53Jr8hcRsoTkWxshS0gFaiNkCalAbYRxCfUPZQVC8iq3Jn8sIbmXW2MJqUi5tbSEx3/bgZC8aiNkCalAbYQsIRWojTAu4eQnS0i+5dbkjyUk93JrLCEVKbeWlnDCEpJzLYRawilLSM7l1uSPJST3cmssIRUpt5aWEITkHQipeCCk4p0g/ABCci63Jn8gJPdASMUDIRXvBOE1CMm53Jr8sYTkXm6NJaQi5dbSEoKQvAMhFQ+EVDwQUvFASMUDIRUPhFS8E4S6VUeBkLzKrckfS0ju5dZYQipSbi0t4YwlJOdaCLWEN89NegAheZVbk7+IkCUk39oI4xLeLv8tIXfbkUfv77aTv3TpNrd8kkdy9f6Wz3Tptq5//91w3zHH78iZvMmd/IWv6639eOHmd073R67kS87kTe7kL3x/2dnndRNf2CWZmkiirpIvOZsf3MlfmFc7+3YQeb9q0nv07bK2j/HokwuHc44jT3IlX3Imb3I3r3b2F/o7SY7t1sjFAAAAAElFTkSuQmCC" InformativeScreenshot="69ed47e5185896c23fda56b630de58a9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="183, 471, 131, 67" FriendlyName="'Enter authentication'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='11' parentid='auto_off' tableRow='1' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='bold_text_black' parentid='auto_off' type='' tag='FONT' aaname='Enter authentication Value:' check:innerText='Enter authentication Value:' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NTypeInto.Target>
+                                        </uix:NTypeInto>
+                                      </Sequence>
+                                    </ui:CommentOut.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:CommentOut>
+                                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter the Authentical Value" Title="Enter the capcha">
+                                    <ui:InputDialog.Result>
+                                      <OutArgument x:TypeArguments="x:String">[str_inputDialogValue]</OutArgument>
+                                    </ui:InputDialog.Result>
+                                  </ui:InputDialog>
+                                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  captcha'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[str_inputDialogValue]">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6ddf38f6-ddc3-438c-bdb0-4c7df44c3dee" InformativeScreenshot="1c06a9466e23c963d8174226bbfa10c9" Selector="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='captcha' tableRow='1' tag='INPUT' type='text' name='captcha' parentid='auto_off' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:TypeInto.Target>
+                                  </ui:TypeInto>
+                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7ace5614-3dc0-46e2-87de-71b45538c146" InformativeScreenshot="e47ab0f784122bfd043700fb8d64a3e7" Selector="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='submit' aaname='Submit' class='button' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                  </ui:Click>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="293cd92b-170a-4720-a6be-65ef1f98d9dd" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" DesignTimeRectangle="362, 717, 66, 26" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='button' tag='INPUT' type='submit' aaname='Submit' check:text='Submit' /&gt;" Guid="0162106b-a5c7-4334-b1f6-37d6f2f5a790" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAeCAYAAACR82geAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIRSURBVGhD7ZZNcoJAEEa5mFu33sG1N3Dj1r0HcOPOI1iWd8gFPELUxFRMZOye325oECmiFe3Fc6AZZpjHB5i9f5+N5eRb3bckMQoj251yayvLMgXYYXLQRzQExfXb10uDDkhiztaSinFiog+7oYmxRDEuMbkmxuPEeB+amARLzB4M7e+SmK0Z98Pbf2JmYp8uofMNzHgl9eFg3+gDf8qPEh20QH9ulmSw5vwXMd6HM5Tbou2wmPjBACYhTTRcpMGac28xVWzMUFwfTQz4QEPpUSInVVkGcc8txvs4hGcKiuvV3PTCSU0unvYfba7Ui2LoTaD9HLNROIY3iJ5L+/IxetNtzRhQY+vj4LnYRh/REBSLEyG16WgtBvHiK8ZIi0KqFubGWE4HsUavtyTG1psm5ic3CBbxIJ2kTCFFrcXwcaQF3LQoMh9NTRsx0ceBJcZ3Kt0ZTrwrHYmR7nhbMXLqbhBTlRgR+qVCwuTPKIYmBsFi6CAifcY7EiMt4JGJsT4+wA6CRTsBXSCFigl9OhEj1x8lJvpgiSET8K8RGazBokSJFX07+aLcJIbW6VrqEgMH675KXFaASvP0B1cSU4RfOPKXYqRrCf9jog+30eAd8wIkMeDjEzYQFePERB9oRxPjcInxPjQxCZYYt6GJQZIYTMyvJiZgxQQfNDEKScwRDB1hR1veZviDllx79u2r7+fmAv5CuLuzVgdtAAAAAElFTkSuQmCC" InformativeScreenshot="ccad68b6fbb9982ea4f40b6061f0b2a7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="372, 613, 171, 44" ElementType="Icon" FriendlyName="'IMG captcha_name'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='' aaname='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:UiElementExists DisplayName="Element Exists 'STRONG'" Exists="[bool_submitClick]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_12">
+                                    <ui:UiElementExists.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aee4765f-6774-4cf1-bd7b-1d66e874bf20" InformativeScreenshot="4e50a6f2eb02b002d0ef84cebe64686a" Selector="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='STRONG' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Incorrect Value(enter the same as shown)' /&gt;" TimeoutMS="5000">
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:UiElementExists.Target>
+                                  </ui:UiElementExists>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="526,392" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[bool_submitClick]" sap:VirtualizedContainerService.HintSize="484,300" sap2010:WorkflowViewState.IdRef="If_13">
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="x:String" Default="Enter the Correct Authentical Value" Name="str_catchCondition" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Throw Exception="[new BusinessRuleException(&quot;Enter the Correct Authentical Value&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_12" />
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Edge" IconBase64="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" InformativeScreenshot="65f55a01bb81883cf799b4d8e4dcdd3b.png" Selector="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;" Url="[in_enterDataUrl]" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="739,51" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,330" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the Authentical Value" Title="Enter the capcha">
+                            <ui:InputDialog.Result>
+                              <OutArgument x:TypeArguments="x:String">[str_inputDialogValue]</OutArgument>
+                            </ui:InputDialog.Result>
+                          </ui:InputDialog>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="739,51" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,226" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  captcha'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[str_inputDialogValue]">
+                            <ui:TypeInto.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6ddf38f6-ddc3-438c-bdb0-4c7df44c3dee" InformativeScreenshot="1c06a9466e23c963d8174226bbfa10c9" Selector="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='captcha' tableRow='1' tag='INPUT' type='text' name='captcha' parentid='auto_off' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:TypeInto.Target>
+                          </ui:TypeInto>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="739,51" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7ace5614-3dc0-46e2-87de-71b45538c146" InformativeScreenshot="e47ab0f784122bfd043700fb8d64a3e7" Selector="&lt;html app='msedge.exe' title='View Patta / Chitta | eServices - Taluk Offices' /&gt;&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='submit' aaname='Submit' class='button' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[exception.Message]" />
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

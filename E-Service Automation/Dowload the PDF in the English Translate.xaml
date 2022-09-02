@@ -1,0 +1,371 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Dowload_the_PDF_in_the_English_Translate" this:Dowload_the_PDF_in_the_English_Translate.in_dowloadPDFUrl="https://eservices.tn.gov.in/eservicesnew/land/chittaExtract_en.html?lan=en" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_dowloadPDFUrl" Type="InArgument(x:String)" />
+    <x:Property Name="out_propertyOwnerName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_propertyPattaNumber" Type="OutArgument(x:String)" />
+    <x:Property Name="argument1" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1474,4218</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Dowload_the_PDF_in_the_English_Translate_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1190,4153" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1148,4061" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="Dowload_the_PDF_in_the_English_Translate" sap:VirtualizedContainerService.HintSize="1110,3812" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1068,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started the Dowload_the_PDF_in_the_English_Translate&quot;]" />
+          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: Tahsildar's Office Internet Service - Land Ownership Details" sap:VirtualizedContainerService.HintSize="1068,3458" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8466b78d-46f1-41d7-8988-28ebe82fc259" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1034,3242" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="bool_translateEnglish" />
+                    <Variable x:TypeArguments="x:Boolean" Name="bool_printDownload" />
+                    <Variable x:TypeArguments="x:String" Name="str_pattaNumber" />
+                    <Variable x:TypeArguments="x:Boolean" Name="bool_pageWillNotApperance" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:UiElementExists DisplayName="Element Exists 'TD'" Exists="[bool_pageWillNotApperance]" sap:VirtualizedContainerService.HintSize="992,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6d78b136-372a-4228-b797-a32bb5e5aaa4" InformativeScreenshot="1f8d257ab107498ec9b3340698bcf327" Selector="&lt;html app='msedge.exe' title='Insert title here' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' aaname='                          INVALID ACCESS TO THE SITE!!                       ' /&gt;" TimeoutMS="3000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="992,116" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Delay DisplayName=" Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  </Sequence>
+                  <If Condition="[bool_pageWillNotApperance]" sap:VirtualizedContainerService.HintSize="992,2846" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw Exception="[new BusinessRuleException(&quot;Enter the Valaied Input data&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="705,2687" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:UiElementExists DisplayName="Element Exists 'check box'" Exists="[bool_translateEnglish]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                          <ui:UiElementExists.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7afb546a-c5a5-4660-84ef-539b2ff833bf" InformativeScreenshot="e2bfc60723dfa08b4c606f476e0c594d" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Translate page from Tamil?' /&gt;&lt;ctrl name='Translate page from Tamil?' role='dialog' /&gt;&lt;ctrl name='Translate page from Tamil?' role='text' text='Translate page from Tamil?' /&gt;" TimeoutMS="3000">
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:UiElementExists.Target>
+                        </ui:UiElementExists>
+                        <If Condition="[bool_translateEnglish]" sap:VirtualizedContainerService.HintSize="663,409" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ClickType="Single" DisplayName="Click 'push button Translate'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8466b78d-46f1-41d7-8988-28ebe82fc259" Version="V1">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="45, 170, 120, 32" ElementType="Button" FriendlyName="'push button Translate'" FullSelectorArgument="&lt;ctrl name='Translate page from Tamil?' role='dialog' /&gt;&lt;ctrl name='Translate' role='push button' aastate='default, focusable' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Translate page from Tamil?' role='dialog' /&gt;&lt;ctrl name='Translate' role='push button' automationid='' /&gt;" Guid="68f2a485-3d15-411d-b0f9-e35f7c70b96d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAkCAYAAABLw14kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIZSURBVHhe7ZtLSh1BGEbdjUvJQtyEWxCygEwcZiA4ceQkAycBZyKISDK5EyEP8JEoPqK2nMbTVC5FvISbUN3/f+Cj69m3uaeruie90iWhSOHBGIRvHV52q28/dSvrR5kJBae4lUF4yp5ucCuD8NrAzHQiKTxIJIUHiaTwIJEUHiSSwoNEUniQSAoPEknhQSJNCp+d379c1e98+HxVHb+M8Juk1jeFSJPC13e/dBt737uD05v+2iiTte3T6vhlZFHh3HQn3+6qfS1Hmt7S+XP/17UtKnzRca1FRiXcukdWPatNEPFmc9aPhY+z674Nyj7m3/566ttdraVIdpKvPx/6fuA8jimhjd3Ids75/uCib28tMlrhtr3bP+uPyLy4eRz6gDryuDEAGZadZ+aFI5IyR2De/DhS/ibnhH/56PnbyCiFu1JtQ4ArthRuuawzl7GI4gbwXKVI2nh/oC414d488zi2pcgohVvfOf7Ry3M1IuI14ZQRylyks3U7V5Fs85RdqfAn4S0Kno+MWjh1pCHQP1+pZblWJ0gHyqVIjj7b/c1SuDcJ4YZjLNfgzmBfS5FRC2cFIhx8QVMqlIKt+0wGt3X6S+E8ixFJ6AeFU6cdqHM+X/Bo9wWvtUjTwjPLi6TwIJEUHiSSwoNEUniQSAoPEknhQSIpPEgkhQeJpPAgkUF4fkw43VQ/JszPhacZnFY/F05ikMJD0XXPBoZV3H9mq6cAAAAASUVORK5CYII=" InformativeScreenshot="b4ee3428db5ee544e132ca913c9a2d47.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Translate page from Tamil?' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="173, 170, 120, 32" ElementType="Button" FriendlyName="'push button Not now'" FullSelectorArgument="&lt;ctrl name='Translate page from Tamil?' role='dialog' /&gt;&lt;ctrl idx='2' name='Not now' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Translate page from Tamil?' role='dialog' /&gt;&lt;ctrl automationid='' name='Not now' role='push button' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAkCAYAAABLw14kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHxSURBVHhe7ZvNjYMwEIWpjw6SYtxFblTiSugiyi03rwfzYOw4u2E3rBzmPemTwD+A+AbDhS4wpkLhxrIIv9/v4Xq9kgMibpFFuHTcbreHweSzgVMkE06OC0LhRkAo3AgIhRsBoXAjIBRuBITCjYBQuBEQCjcC0qDwMQx9Fzrni3YfXD+EMWsjr4I0KrwPfZTuvG5/Xbh35VyCNCt88EOUrgXbE365XKrtmlfGCEi7wsckrh/Gub0QPsaC6OLSPwPBMgdtXaVAUjHEY2FM9uqYXydln3dqXBqzFJRcx8Pr5z2cTqdwPp+rfYL0C7W+EqRp4ZPkTm1D4CQb7eW475/wVBAu+Glfz0si1wJTBSfn0+eWV84seRzitprzbp5J3yJbQBoXHlmeLiU8tpU3Wd/4n4TrvnVfHR8sotdrkvNMK8Q81jtdePtQSt8qW0DaFz4/efom/7/w9fjepdUhia7M2QlIF7bKFpAPEB7BMoqbK/t/WNLrwlNh6UKSvmVfzhllO/Ven66pKLw9+c2TDZDPEB6Rm599hMlSj4+rSCYYfZWn77lwQQpnPWbtgy4f+3idrYI0KJzsAULhRkAo3AgIhRsBoXAjIBRuBITCjYBQuBEQCjcCQuFGQDLh/JnweDz9mZC/Cx+X6u/CjI1QuKmE8AUvmKQNCydNcQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Throw Exception="[New ApplicationException(&quot; Popup Translate cannot apperence in the Page&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="663,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Delay DisplayName=" Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                        </Sequence>
+                        <uix:NGetText DisplayName="Get Text 'son'" sap:VirtualizedContainerService.HintSize="663,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="8466b78d-46f1-41d7-8988-28ebe82fc259" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaExtract_en.html?lan=en" DesignTimeRectangle="982, 341, 388, 25" ElementType="Text" FriendlyName="'Murugan'" FullSelectorArgument="&lt;webctrl tableRow='12' tag='TABLE' /&gt;&lt;webctrl tableCol='4' tableRow='2' tag='TD' aaname='*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='normal_text_black' tag='TD' /&gt;" Guid="9d72b66b-db1e-443b-a56d-9fd5840d0721" ImageBase64="" InformativeScreenshot="273253c667ba4d1689b5e12dedbdaea7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="827, 341, 155, 25" ElementType="Text" FriendlyName="'son'" FullSelectorArgument="&lt;webctrl tableRow='12' tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='normal_text_black' tag='TD' aaname='son ' check:innerText='son' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAdCAYAAAC0Y74zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADxSURBVHhe7dXLCYQwFEbh1BiwnxDSipaihbiwjIyaqxgZx2Fg/DfngyxyfawOicuACPFBhvggQ3yQIT7IEB9kiA8yxAcZ4oMM8UGG+CBDfJDooyM+aJzim3LbzANnK/Y2txdt7rvJpmXuY8p++6Zp578A96r4ps7XwXUlpHW+R1UCTcO6KT+4eAZ8Up98Q3p7ei0vHYM6RrqefKeTkPjwjTq+zdjaNZrykhjx4R+q+ProczvaZs4uubK/u3aJD7+o4tuvXVvnqK7mxIdf1PEBDyM+yBAfZIgPMsQHGeKDDPFBhvggQ3yQcSGEzGI9v0J+AUiDVkl21nQKAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[out_propertyOwnerName]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text 'Taluk : Nanguneri'" sap:VirtualizedContainerService.HintSize="663,156" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="8466b78d-46f1-41d7-8988-28ebe82fc259" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaExtract_en.html?lan=en" DesignTimeRectangle="256, 304, 343, 15" ElementType="Text" FriendlyName="'Patta No: 756'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='8' tag='SPAN' aaname='Patta No: *' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="5ac0a169-ffcf-483f-b857-5c763dbc7ec4" ImageBase64="" InformativeScreenshot="92f19e9fedbea1559a65cecd877b9734.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="162, 277, 410, 15" ElementType="Text" FriendlyName="'Taluk : Nanguneri'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' aaname='Taluk : Nanguneri' check:innerText='Taluk : Nanguneri' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZ4AAAATCAYAAACgJWu9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVHhe7dtdjoIwFIZh1kjihghbwaXgQrxwGZ0Cbak9PYNFh6n6PkkzsZb+YHK+9GIaAwDAgQgeAMChCB4AwKEIHgDAoZrmNJib+wAAb+06mLZpbGFrzXB1fRtu59aOt89QC19P+T0IHgCVGE0/FymlPVKragmeS7/uuxtd57pWe/6SqqsFj/sLAPXYESCzGoMn2svXBY+CGw+A+mgBEvrj1tu7kiOeW29R/WUeYcbOPeduIiJ4Qmho4XUzw+l+TsHPcWqX/SRrheApOc85f4uK93PX/HnEO1nH+32s72SI5krPn95Io+9z+5z2KNZeEDwA6qMULCEUeK3IFgbPQ+sWBI9dw683jd288ajnWeYqPs/UIc70S/C4MfocLhTVz1EjeAC8FaVgzXJFTi2yJYW6N31SkHeLgifsye5xzAVP0XnS0PDnW9/TU8Hj3knYvwuWMKf/Pn2vYg1H6Sd4ANRHK2RJQQzjXhE8UfNjd4uDx/JrtKckeIrPk4RG5j39RfCsNyLZCB4An0EpWKJA+nEvCR5bZNMg2CsJnngfU1ML/uZ5/id4wpzhPInMPmZKP8EDoD5KwUoLYEmR3QyeeQ5ZlCU5pyCCJ1onmvuZ8yxzyP2KOULoaXNsB4/2e4yd+6x8r/UTPADqoxWyqGjOhbPrl3FqobZCEU3aZrHXgmVf8OQKfvl5cnPc36ZCU0Ivbg8Hzyy3jtuX9nsp/fwfDwB8EB8iazDVh+ABgDeWu83UHDoTggcAcCiCBwBwKIIHAHAgY34A/2R/AFYuvdEAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[str_pattaNumber]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <Assign sap:VirtualizedContainerService.HintSize="663,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[out_propertyPattaNumber]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[split (str_pattaNumber,":")(1).Trim]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Print'" sap:VirtualizedContainerService.HintSize="663,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8466b78d-46f1-41d7-8988-28ebe82fc259" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaExtract_en.html?lan=en" DesignTimeRectangle="772, 778, 44, 18" ElementType="Button" FriendlyName="'Print'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='37' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='button' tag='INPUT' class='button print' aaname='Print' check:text='Print' /&gt;" Guid="56b190e0-fe18-4fc3-99cc-9a1a3c37de03" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAWCAYAAACG9x+sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVFhH7ZOxDYMwEEW9GG1adqBmgzS09BmAho4RUMQOLJAtUl5839jYyERESiAHnPQscf+w7/tAkfDYjwGllDjQN1YdnLj3TzGcBrbmeAaaMkVNSErXNl4P2ooS1BV0i+kT3Bl5F9V9uA59Y9XBiVihxW6elA+T+7C5JaxroO8ogwEzhVGvTP5SUeNqBpPWtNauOecNWa21unDPQd7rwYd19I1VBydihZbZCaBR7/Ys7wxogqane/xyAgHDwb4+ToiZnwDem7uEdT6hJfrBDLhPSqwBV2/46k/8b5wGtmafBqSBvrEKDuEGiF7i7tbyipH55wAAAABJRU5ErkJggg==" InformativeScreenshot="182cc555befcd734108da89e87b06918.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="1462, 807, 79, 13" FriendlyName="'Back Home'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='38' tag='FONT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='FONT' class='' aaname=' |  &amp;#x9;&amp;#x9;&amp;#x9;    &amp;#x9;' check:innerText='Back | Home' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAARCAYAAAChIpBnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFwSURBVFhH7ZOxEcIwDEUzI0MwRiqWYIBswAxUHHRpKClSMYOIbcmSjJ0EEFy4879T4UhJvl5+GqgyU4VpqArTUBWmoX4CczhcoNmeYHO445UZnXs/vzvj+U+kYB73J7+Erh6O2H9X34BJXuUMvafZ3/DKb5WFSQatzFWYo1II0awotfBwhY3qX6Ab0ufcoWtDvwjXECbNUfH8DXb+Wg+d2Mv15T3KA/qK1V5hXC/q/d88gsN+ehaSMOkdkyl9AWa2ECbNhOfQRwwfmGGiFxEEP0/gCBieyXcaNKfJZD4DYgNcoZdLBSm+uC3PKJkkk7wSvBQAJzMbBjojzOLHE7tMw1SG+PcMfW1mCcxmhBkM84JZmcKkIHD/E5gyiamWJdM/UIJ1zRkzQmqJ9PfJyQRmOlP6zZfBjL7lfm5mLpm6+OZottBnQ1TBuE4EJzyXYi8jmE7pTjz/IkynCFRUCeZqtADmGlVhGmqdMP9UFaaZAB4aaj+L6GHeHQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <ui:UiElementExists DisplayName="Element Exists 'grouping  Print'" Exists="[bool_printDownload]" sap:VirtualizedContainerService.HintSize="663,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                          <ui:UiElementExists.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e5a2eebd-3cad-44af-a2cd-b1840e3f578a" InformativeScreenshot="e91bcbca6bf5d13b9e8080f470f593b9" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details - P*' /&gt;&lt;ctrl name='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details' role='document' /&gt;&lt;ctrl name='Printer' role='grouping' text='Printer' /&gt;" TimeoutMS="3000">
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:UiElementExists.Target>
+                        </ui:UiElementExists>
+                        <If Condition="[bool_printDownload]" sap:VirtualizedContainerService.HintSize="663,409" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ClickType="Single" DisplayName="Click 'Print'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8466b78d-46f1-41d7-8988-28ebe82fc259" Version="V1">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="90, 737, 122, 32" ElementType="Button" FriendlyName="'Print'" FullSelectorArgument="&lt;ctrl name='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details' role='document' /&gt;&lt;ctrl name='Print' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details' role='document' /&gt;&lt;ctrl name='Print' role='push button' automationid='' check:fulltext='Print' /&gt;" Guid="e54343d4-fc9f-42f0-bec7-12f6a2518c77" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAkCAYAAABPNo4ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAISSURBVHhe7ZuxbtpQFIZ5iT5AHqGv0bEja0dGluzploxMFYnEkCF7kLpkqKpkiNCdIidCAhShhBYRJxQiE5ny19f4WC65ZMgE9/yf9ElwfSBCX2zfxSUQlTC8UvLwR61HfNi7Rmn3inqobWsbC3l4Rvdf21jIw7sGqX8KDK9MgeGVKTC8MgWGV6bA8MoUGF6ZAsMrU2B4ZQoehB/gLMp+hBDFMOYeO855axvVdoxo+oyv+67j/ir4E/5lhqZ5wrGZIEj/ERYwP9uOeWsP9V8LIJ6hfug6/tryZYTHOMbZqfv4tij4Ez6aoiprh2N07Y+6H63Mvt9qZ5584ZzhN0dH+P2nQvgQgX09mqIZJmd5Fq8+tIvJGZ9+JpsZjnHQi+0r4O8C3WCQ3i6WswWKf2vLFPwLX7tD7daenYA5t5f6LGpy6Q9MP7/vO8MnM93OAyrfQ5ipfR+jeXKFj40+DtLvnOPiRx/l494b+4fNVvBzc5cw6I3wKT2eRf0zQbnwOWf4ZOZLdnzHvNgVBK3le17qN86Vzd35b3z+VtzUyWU8LKytu9QXZlozu8Lwm6vjHv+fDF9UYPh1MyvhK+3lvqF7M0TNhKjI3JYpMPy6mZXwpcYDjOwlkr0Aw9OtUmB4ZQoMr0yB4ZUpMLwyBYZXpsDwyhQYXpkCwytTyMPzoUn/dT40ycek/da2dT4mTXTB8CoB/gH1o7IP22rBqAAAAABJRU5ErkJggg==" InformativeScreenshot="ff5129b24d40d58c29fc9bf2e4b7f5c2.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details and*' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="220, 737, 122, 32" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;ctrl name='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details' role='document' /&gt;&lt;ctrl name='Cancel' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details' role='document' /&gt;&lt;ctrl name='Cancel' role='push button' automationid='' check:fulltext='Cancel' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAkCAYAAABPNo4ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALhSURBVHhe7ZvBZ+RQHMf3/8lpKMNSlp6a05zCHmoPwxCWULqWjj1EL+1hY6k5ZS5TllCGMofKUsKSQ3UZKUMooQxleu7tu7+X5Je2I2u7h7Tbeb8vn8Pk9zIz8sl7v5dD3kCiZUS8pqnE393d4fb2FovFQlhBlFvlmFOJF+mrj3LMqcTXDRRWD46I1wyOiNcMjojXDI6I1wyOiNcMjojXDI6I1wyOiNcMzusTf5MiPHSwtdmGYRhEG+YHHxd1Y5+JaE/9DxdRTe1/g/O6xF9H2O+0ctlbuz6C0xBh4MN1Bi960UV8o8wx2SXpa12MpnX1l0PEN8lshC4t7dYwqa/nZIioDVjv1KpAMt5a6B/z+AiuOrY3wcXQwfracr0gPfVgcxuhun9e1tIQnm2inR83YR/GmJfniPgmOXNzGe5ZTa0iwuCzj2iaIZvF8HvqBqAVYlbUcvFrHXw6ipFOI3h53cE4K85Pv3fRMlqwDgLE0xQXJx5GEdWoxbibBlo9H/EsQ3LSh0njnOMsP0/EN8mTxC/x6JxS/McAGdd/PKzH8DaovjOpZjKjbgjDsBFc8bEMY4fG9gKk9FnEN8kvHx2SZAfFLKvlJkMcDNC3O+h01mn2KiFL4vei+/EPb4w0yFtJ9yi9r5cUYmvojkR88yTwLbrAGy7CcmleJhlaJKAL7yxBdpVh/mhG/0U81fep77e+hH+Y8Q6CS2oh9L0V2Tyvi/iGmccDWGpTRn3aORhhUj7O9XteftGjg6KnD36myKoe/lTxC8TfTPpMj4pfl3r8jFYD+l1zp9w/XCWIjlz4qqZ+V8Q/A7MQg22r2JUrkbTD3toOkKja5Rh9q9iRty0Xk+BfZjxBrSKiHT8/FbQ37erRcX4+Qv89t482TJu+P980injhFcAR8ZrBEfGawRHxmsER8ZrBEfGawRHxmsER8ZrBEfGawanEy0uTq0/tS5PymvRqo9zWviYt0SsiXssAvwHN3kWVeduyJwAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Throw Exception="[new ApplicationException(&quot;Printer Option cannot show&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'File name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="663,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="8466b78d-46f1-41d7-8988-28ebe82fc259" Text="[out_propertyOwnerName+&quot;(&quot;+out_propertyPattaNumber+&quot;)&quot;]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="136, 369, 631, 17" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="8963b2d6-28a6-44d6-9447-778ad31ffffb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAnsAAAAVCAYAAAA+VSiUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB7SURBVHhe7dYBDQAwEMSg92/6ZmAKGlDBDQCALNkDAAj7Zu/OAQEACmQPACBM9gAAwmQPACBM9gAAwmQPACBM9gAAwmQPACBM9gAAwmQPACBM9gAAwmQPACBM9gAAwmQPACBM9gAAwqwOACBM9gAAwmQPACBM9gAAsrYHG9xq8/swANIAAAAASUVORK5CYII=" InformativeScreenshot="6e871adfd0ec914e5135b682635f7445.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save Print Output As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="18, 366, 115, 23" ElementType="Text" FriendlyName="'File name'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHcAAAAbCAYAAABGDxCrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFISURBVGhD7ZXRrcMgDEWZinkY423AMOzCb9dgAz+cQmtcp2n7F+dWOhIQbBCnmNBaI+ATyHUM5Dok/N3uWB/BuWGx/INch0CuYyDXMZDrGMh1zAXlFkohUBDEXKnVTDFEynXOme3zclG5R+Ig96RArmP2xMlxNWcr2bOMJypLHDPm57SW+vG9pOcTEFJZY8ozdyqNao5mDnMPpa8XM9U5R4E3t8OHui9Xtjv9QJdDlzmnOD70d3+CR94eM+VsMULokmNnDzwHciXqoMxx0V5uzOBx+6xYoz/E3THWOMrx0R5egVxzXB+sdQslR2JmfKUcjTW+yvE5kGuO67Z6/17QOUVfls5NkrXGUZ/bxh5QljX6EK1xNUeXxa/KMt/WERcTpV9uLvetPUDudYFcx0CuYyDXMZDrGMh1DOQ6huVuWB+BDyDXLY3+ARXyTt1LguG5AAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NClick ClickType="Single" DisplayName="Click '&amp;Save'" sap:VirtualizedContainerService.HintSize="663,156" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8466b78d-46f1-41d7-8988-28ebe82fc259" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="587, 434, 88, 26" ElementType="Button" FriendlyName="'&amp;Save'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='&amp;amp;Save' /&gt;" Guid="b2828118-6fda-4138-b669-ec3ac17e23d3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE+SURBVGhD7ZbLlcMgDEXpiW5ohlZowEVQijtwBxqJTyJiz5lNoshn3uIef4Q3V+LhcBwHATsg3BgIN2YRvm0b+ADa8Un4vu/gjUC4MRBuDIQbA+HGQLgxvoWXRCGEQaJyteZm+BVeM0UtmZ9zUfWb4le4THfMVK9qN8av8L1Q4iiJuZ5qJc2YYVLhd5VyDJT0DtANa7vFRzQ5Fi50kSJqkflAmhIpV74XwU1+r0lT+jdqjdR43VUTrXAufDAm9CF9OUynTBE7p5fvL6d7oBpjzT2EMzXHLmo5TGUHPKdX1sj0zmv7dln/ffwKL/xXMmNgREuTeMpmFRfyHBNPtxb8+1nwDRxPeBd1joFnrocmVwmftdfIeI0VRMr/AcKNgXBjINwYCDcGwo2BcGP+FA7ej3a8CAefB8KNgXBTDvoBlgOHuFI0/LcAAAAASUVORK5CYII=" InformativeScreenshot="5780f9baa2d7b5571c1e2901b0aef5d5.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save Print Output As' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="133, 391, 654, 23" ElementType="DropDown" FriendlyName="'PDF Document (*.pdf)'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Save as type:' cls='ComboBox' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Save as type:' cls='ComboBox' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAApIAAAAbCAYAAADPqG9fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANBSURBVHhe7dvLdaMwFAZg9+ResqAZCsnGDWSVClxECkgH6YBBPIwkHjKMk5kk3+I7Z+CKK4E3/5Emp4+PjwYAAPYSJAEAOOQWJF9eXgAAoGgxSL6/vwMAwCpBEgCAQwRJAAAOESQBADhEkAQA4BBBEgCAQ+4MkpemOp2a0825qa9rtVNzrq8bz+b1e8f8LNf63Jyqy3B9beqqbq7ZmP3Cd4x+m0vVf89z3fb/+d8UAPhaO4LkFFC6ENSGkz74ZOFlDIW3kJTXl5R6fDeFd77WzXn4fn2gDEHvEWEvnrf/htVlrLVh9Vz6HQAA7ncoSM4DSxZQQlA6Vc1l8dklpR7fzfY7h/CYBMZh53AKfUcVfpcwz7cN5wDAZ3t9fV28HyzVPidIdrtfYzBaqudKPVpdsJyOvtPQ1Y9Na3es+TL1DM90u4PDdRL0krmzgFwPx8e3Z8L9cWxrFtzyncF2fLc7Ge4vBef5WtfWdq7r4R3TNdzGh7G3nWQAgMnb21vz9PTUPD8/z2rhXqiFMfH9Q0Fy+2g7yIPkFGqCNASOY8o9bs914Wkc349LwlUn7xlfD2sa32HYEbz16K5XdlTbWhIYx6C49Uwi1PbstGZrTd69r43fpQ/CcS1fw965AYDfZClMroXIYEeQnILgFJjGWh5Y4l23pXqu0KMLT2kAulRDgFqo9fKe8fVWLbvu+sfv3urC457+sVDbGyTTXsm7JzuMpTXEvwsAwFwcJrdCZHBoR7JYS8Ld1rOjQo+FsPi1QfJv+8dCbanfmrxXtFMb1rYrSO6dGwD4jcYwuRUig08IkuF6Om7dfnZ0T4/oOgl3a0fbUeAK193R8zjH0nxr1/3c+4/O41rsnl3BjfmTd+9r4zsWj7ZnwRMAYFkIkFshMnhQkIyPfvNxW8+OSj1aXYDammN6Pg2Pw/2qitaRr6lwncwdepWOtvsd02nsOKY3+6vtmbhX/++qmv4QaArYregdpz+2yXtEYxfWAwBwxJ1BkofatTO4EAgP8f8jAYDHEiT/ke4Y+q7dwccEyW6H1G4kAPBAguR/71E7kgAAjyVIAgBwiCAJAMAhgiQAAIesBkkAACiZBUkAANhDkAQA4ICP5g9j6ON8BqB5XQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Back'" sap:VirtualizedContainerService.HintSize="663,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8466b78d-46f1-41d7-8988-28ebe82fc259" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eservices.tn.gov.in/eservicesnew/land/chittaExtract_en.html?lan=en" DesignTimeRectangle="1462, 807, 30, 13" ElementType="Text" FriendlyName="'Back'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='38' tag='A' aaname='Back' class='link_bold_text_blue' innertext='Back' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='link_bold_text_blue' aaname='Back' check:innerText='Back' /&gt;" Guid="67bb4304-8884-4a6f-be6f-3014cf671b53" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAARCAYAAAC4qX7BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVEhL7ZLBDYMwDEUzI0N0jJxYggHYgBk4Ibhx4cghJ2ZwSxwndihRGlUqUvmSJZwfnBc7Ci6iGyTWf4GYbgL1GKDqNrdylADpm8H+IGOG3vmlKgapR8ypgGpWXCjU10CogAdjQXutzAKV8CdoTVxng1ajz8HKR+MPdX6cM3EQOiPuTrIjx+Ir1DbngZ7v1psxehB9vicN4g/eWxxaij55+SDqBYIXw5Fx5XVEL2AE1G5KkNzRwDjbb6wZ9NEb8Tc78QMMRfqx8u4JkF/qBol1ERCAJwWCPekL5uQ0AAAAAElFTkSuQmCC" InformativeScreenshot="cecc43fb02e46d46bb116e2081f52e25.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="1505, 807, 36, 13" ElementType="Text" FriendlyName="'Home'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Home' tableRow='38' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Home' type='' tag='A' class='link_bold_text_blue' check:innerText='Home' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAARCAYAAACvi+4IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADaSURBVEhL7ZOxDYMwEEU9I0NkDCqWYAA2YAYqBB0NJQUVM/zYl/uxsUCKIYpQxJeuuPP38Xw2BhfXDXhWN+BZrQCbsoV5tCg6LVjNdS81U05a+a3+E5A+hvdPKKQ2oOI+XQ/3hP3RDe+6RD5i1iWnTcDNUMD1IRZUuct7VNKVgC2yerGnG5FpLn7CEEJz8VpxGMydEidIAALFTf0EG1kkYJQr4O5Agts6CKgftPoGYDixWMlvcO3Zu+LPAP378wcWz/EJvkQfw/sTAZ3in8TFHuAVdQOe1cUBgScUrr7VrCwyhQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAh4SURBVFhHpdd7UFNnGgbwWBURCAQVtu0/OzudcXVFVEBATdWKLVvkIuEmWAoUtOttqsICIiqKiEQBoV4xut1O1d11lW4RvFTSQ0ggECABkhAIIF4QpXZTt1Pcdbt59j050QoBq+07804YhuT5fe/58p0D70XLi3kQM69mgJlb02+aU9OHObIeeMqMmCM3YI5Ci3n1Gmr1kE+jsptaskhd/WvrW39Z+TDfSnwY05BXzQNQOPVtsIDZsm7qLnjWdsBTrsWculYCNMOnQQn/phoINdfNS9oudy/TVgitH/Vy5cs8Evoy35t8mIfwrvkGXjWDFH6Hwm/Cs+YGZtewgA54yPSYLW+Dp6IVc+ub4KVUYUEzC7iGpW0VWK67iKCuM+qwXsmLT8SPeZTvywyZLeHMP+HFDGJezT0C3OVWT+EelnAO4FHbRgg1AVTwbqiHb5MMC1qqLYDAjnN413AGK3tPDMX158dYI8YuP+Y/Elo55jPfgQXQ+C2rn0fh7AQsq6fRz2KDLa2jn1lAK02hGfOUjfBVsRO4agWcRVh3GQsAAcyr+/PGRvgzj/MJAFo99fcU/i1N4AEB7lsAnjLu2nvIDJbVs8GzZO34nawVs2pZQAvtBRXtAxmE6itY1n4RgfrPCHAC0TcLQeFIGNhhTh5Mt90X/sx/hRRu9mP+bQHMZ/5F/ZCC2Wt/l177afUsoJNCtU+DR/ZseTMhGmgjfonFmgoEaM8juOsEIm4UIe52LpLuZ2HN16lD1tgfy495bKKm8EdWwHfwkpow84tbmFnRS92DGZe6CGCkcP2o4Wx7yFtoLyixsPkKAf6BgHYWUIaIXjFib+UhaSAVawY3YaMpRWKNtqxewoY/Wf30c31w230NLqnlEGRWwjXrCqZkVVFfwtSMcryaX4U3/t48BoD9KjLwbZRiUUsllmvPIMhQhugbuYi9mY3E/i1IubceGx7Em63xFsAQXX94fP4NBFnXwM+4BudsBi67FBDk1sM1rwFT8pSYmleHabkyTNstxbSdl/FqbhWmV2qGAWbLVZhbJ4e/6hIWt/wNAa2fYEVHCUI7xVjVtw0JdzYh+e5a/OF+PDY9iJRQ+A8xBMD0M/1wSL0Kp+214Oc0wnmvBi772yEQ6+B6UIcp1FMLdXArbIPbgRa47a+HW64UbtkVeOMCNw2P2hY6lBQEUGB+fRUWNV/EMs0pBHcUQ2TMQUxvBuJubMYH/Wvx4b14rB+MHuAtqn6kmXn+a0xOk8IhWwnH3Wrw83RwLjDARdwJQWEXXIuMmHLIiKnU00qoDxngXqyD+4EmuOfJ4LajEr+tUtKpKMdcuRReisvwbziPN5s+xTL1MQTr8hBu2I5o4xa835eCpNuJSOmPxYd3ReB5Vzz8H39nI+yzVXDY3QbHvA445XeCX2CE8wEjXA52Q1DUDdfiHkL0YGpJDyE68XppR/evSg0F7kXqdPd9CuVrBdfhwbCA6wSoxALlZ3hTdQpvNR9BiC4XIkMWAbZide9aJN5MRPKtKA4w4y+DmLS9Gfa72jA5Vw+HvE447qPe3zUcUcghBNl1+M2Wz0us2+dpuefVJk4vr4a3/AJ8FefgX/dnLFaVIaBJjOC2TIRqMxFp2Ij3ehKR0LfaAlhzJxw8t+Iu2GW3YlKOHva5Bkzea7AgHKwIpwKCiDmESzoDxyCx0pppUzM+ufrYW3aWAGexsP4kFisPYplKjCBNBkLb0yDSb0CsIQ7x3VFIuiFCys1Q8FwPGjFxpw52u/SYtNsA+z0cYvJIRKaCwgvgFFaabs2zKZ+/Xm33ln0Kv9ojWKQoxJIGMd5pzECgKg0hmnUIb09GlC4e7xkj8b4xBCl9gWbehGwtJhBg4q4O2OV0EKLDgrB/FrFXD8fQIgovAV90PNWaZ1PejCTfR3aKAIcJcABL6vYgoD6NABsQ0pIIUXsCYvTRNAUR4jt/j0RjQDdv/HYC7NATQm+LYC8Ji9hQBccQAoiOgR95ssCaZ1M+X5UMzK85goW1+6n34S1FKpYrUxHYuA4rGhMQpo6HSBOFWH0IYnXvIt4QIOS9sl2H8dm6URGTrAiHiKNwWnmYDQc/+nS3NW9YeUk/FnpLi+k0FcOfyYWwdieWyrciQLEegfUJHKBJBFFLKCI1QYjTBzKWN76SpTONhbBjJ5HVDIeQQlr9cfCjTrEAMz/qtM3DhXe1uNxbWghf6R4sZHZCyGzF0tqNCJAn4526BAQ1rEKoKhwidQgL4MLZGrdNxxACTxDjR04inQ6n0ENwiihjw6n/RJDTA9a3Dyvf6hy1nzTHvECaToBUAqwjwAd4Wx6HoPpwBDeEm8JUoZutf87VuG3aGELABkE9kb4Z9usq4RhWah0/hXMAdhrl1o+wKaF002Yh85FkCZPMBMhWM2/XrpIEyiPGfjYkxBCLGPcsIptD2KXVw3Hlx6MB4Bx5ctT98PKVqc0nBCw9AjExXUUTKIHT6AA4R5QNOYtODB/rc8p1RWGMa9DBUR5QM7Um3ggEB6EzIPww7YETFP50DzwLAAGojw+5hB8rd1l51OaZTxByKEYQXCwRBBeZCAACjDK5TK2Q2jwaYlLKF3AKP0qhEg4xOgAEAAGoj8Al7DAEoaXUJSAACEBdBAKYCTDGfqBLQY2RiPEZLXCMOEaXgb4J7FfxlwHyrWljVKZWYoOgtlt3jaZwhNuMkSziZwF+fA58bnGTMLOQZxH2SRe4S8GeCZESAlD4iwHMBPiJlY8sbk+YRiIsk6AAuilROBvMhTvTfWIMgIkAP+//Q0tx06BzgoVwiPHpLZicdBF8uj8400ScKZR95YKp6fcEGCLAS676eZXJnphahhCmJ6fmhKw22P2xge6WX8Lxo6/gmsr88Fpa9cPXU86PecseXjze/wGADjhbeB2rcwAAAABJRU5ErkJggg==" InformativeScreenshot="34364664e823347b295cbda268d1569a.png" Selector="&lt;html app='msedge.exe' title='Tahsildar&amp;apos;s Office Internet Service - Land Ownership Details' /&gt;" Url="[in_dowloadPDFUrl]" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1068,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ended the Dowload_the_PDF_in_the_English_Translate&quot;]" />
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:ApplicationException" sap:VirtualizedContainerService.HintSize="1114,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:ApplicationException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:ApplicationException" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[exception.Message]" />
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="1114,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="ui:BusinessRuleException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[exception. Message]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>
